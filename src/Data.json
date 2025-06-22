@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Michael Anderson",
+    "role": "Software Developer",
+    "image": "assets/img/person/person-m-3.webp",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.",
+    "stars": 5,
+    "delay": 100
+  },
+  {
+    "name": "Sophia Martinez",
+    "role": "Marketing Specialist",
+    "image": "assets/img/person/person-f-5.webp",
+    "text": "Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.",
+    "stars": 5,
+    "delay": 200
+  },
+  {
+    "name": "David Wilson",
+    "role": "Graphic Designer",
+    "image": "assets/img/person/person-m-7.webp",
+    "text": "Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum.",
+    "stars": 5,
+    "delay": 300
+  },
+  {
+    "name": "Emily Johnson",
+    "role": "UX Designer",
+    "image": "assets/img/person/person-f-9.webp",
+    "text": "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.",
+    "stars": 5,
+    "delay": 400
+  },
+  {
+    "name": "Olivia Thompson",
+    "role": "Entrepreneur",
+    "image": "assets/img/person/person-f-11.webp",
+    "text": "Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.",
+    "stars": 5,
+    "delay": 500
+  },
+  {
+    "name": "James Taylor",
+    "role": "Financial Analyst",
+    "image": "assets/img/person/person-m-12.webp",
+    "text": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+    "stars": 5,
+    "delay": 600
+  }
+]

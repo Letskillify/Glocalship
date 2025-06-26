@@ -54,7 +54,7 @@
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .navbar-menu {
@@ -65,7 +65,7 @@
 }
 
 .nav-link {
-  color: #fff;
+ color: var(--secondary);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -75,7 +75,7 @@
   color: #00d9ff;
 }
 
-.logout-btn {
+/* .logout-btn {
   background-color: #ff4d4d;
   color: white;
   border: none;
@@ -84,11 +84,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
-}
-
+} */
+/* 
 .logout-btn:hover {
   background-color: #e60000;
-}
+} */
 
 .mobile-menu-toggle {
   display: none;

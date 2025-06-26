@@ -15,6 +15,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Header from "./static/Header";
 import Footer from "./static/Footer";
 import Preloader from "./components/Preloader";
+// import Home from "./pages/Home";
 
 
 const AppRoutes = ({ user }) => {
@@ -41,6 +42,7 @@ const AppRoutes = ({ user }) => {
           element={
             <PrivateRoute user={user}>
               <Home />
+          
             </PrivateRoute>
           }
         />

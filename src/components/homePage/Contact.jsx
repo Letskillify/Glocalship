@@ -1,6 +1,5 @@
 import React from 'react'
-import plane from '//Glocalship/public/assets/img/illustration/paper-plane.png';
-import illustration from '//Glocalship/public/assets/img/illustration/illustrationcontact.avif';
+
 import { FaUser, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 function Contact() {
   return (
@@ -21,12 +20,12 @@ function Contact() {
               <div className="contact-left">
                 <h2>Get in touch</h2>
                 <p>a queue or waiting list that users may encounter when trying to access a popular food or grocery delivery service </p>
-                <img src={illustration} alt="illustration" className="illustration" />
+                <img src='/assets/img/illustration/illustrationcontact.avif' alt="illustration" className="illustration" />
               </div>
               <div className="contact-right">
                 {/* Paper plane image absolutely positioned behind the form */}
                 <img
-                  src={plane}
+                  src='/assets/img/illustration/paper-plane.png'
                   alt="plane"
                   className="plane-img-bg"
                   aria-hidden="true"

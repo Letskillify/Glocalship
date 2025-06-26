@@ -1,88 +1,72 @@
-import React from 'react'
 
 function Footer() {
   return (
-    <div>
-       <footer id="footer" className="footer position-relative light-background">
+    <footer id="footer" className="footer"> 
+      <div className="container">
+        <div className="row ">
 
-    <div className="container footer-top">
-      <div className="row gy-4">
-        <div className="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" className="logo d-flex align-items-center">
-            <span className="sitename">Scout</span>
-          </a>
-          <div className="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p className="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <div className="col-lg-4 col-md-6">
+            <h5 className=" mb-3 footer-logo">Glocalship</h5>
+            <p>
+              Glocalship is your trusted global parcel delivery partner. We provide fast, reliable, and secure shipping solutions worldwide.
+            </p>
+            <div className="social-links d-flex gap-3">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            </div>
           </div>
-          <div className="social-links d-flex mt-4">
-            <a href=""><i className="bi bi-twitter-x"></i></a>
-            <a href=""><i className="bi bi-facebook"></i></a>
-            <a href=""><i className="bi bi-instagram"></i></a>
-            <a href=""><i className="bi bi-linkedin"></i></a>
+
+          <div className="col-lg-2 col-md-3">
+            <h6 className="footer-link-head">Quick Links</h6>
+            <ul className="ul-menu list-unstyled">
+              <li><a href="#" className="list">Home</a></li>
+              <li><a href="#" className="list">Track Parcel</a></li>
+              <li><a href="#" className="list">Pricing</a></li>
+              <li><a href="#" className="list">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="col-lg-2 col-md-3">
+            <h6 className="footer-link-head">Services</h6>
+            <ul className="ul-menu list-unstyled">
+              <li><a href="#" className="list">Local Delivery</a></li>
+              <li><a href="#" className="list">International Shipping</a></li>
+              <li><a href="#" className="list">Warehouse Solutions</a></li>
+              <li><a href="#" className="list">E-commerce Fulfillment</a></li>
+            </ul>
+          </div>
+
+          <div className="col-lg-2 col-md-3">
+            <h6 className="footer-link-head">Support</h6>
+            <ul className="ul-menu list-unstyled">
+              <li><a href="#" className="list">FAQs</a></li>
+              <li><a href="#" className="list">Help Center</a></li>
+              <li><a href="#" className="list">Privacy Policy</a></li>
+              <li><a href="#" className="list">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          
+          <div className="col-lg-2 col-md-3">
+            <h6 className="footer-link-head">Address</h6>
+            <ul className="ul-menu list-unstyled">
+              <li><i className="fas fa-map-marker-alt me-2"></i>A-108, Global Business Park</li>
+              <li>New Delhi, India - 110001</li>
+              <li className="mt-2"><i className="fas fa-phone me-2"></i>+91 98765 43210</li>
+              <li><i className="fas fa-envelope me-2"></i>support@glocalship.com</li>
+            </ul>
           </div>
         </div>
 
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
+        <hr className="text-secondary mt-4" />
 
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
+        <div className="text-center pb-3">
+          <p className="mb-0">&copy; 2025 <strong>Glocalship</strong>. All rights reserved.</p>
         </div>
-
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-
-    <div className="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong className="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
-      <div className="credits">
-       <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-
-  </footer>
-
-    </div>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

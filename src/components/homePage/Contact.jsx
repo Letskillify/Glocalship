@@ -10,10 +10,8 @@ function Contact() {
           <h2>Contact</h2>
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="contact-main-wrapper">
-           
             <div className="contact-card responsive-card">
               <div className="contact-left">
                 <h2>Get in touch</h2>
@@ -49,7 +47,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-
+            {/* googlemap  */}
             <div className="map-container">
               <iframe
                 title="Google Map"

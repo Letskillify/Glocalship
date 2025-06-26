@@ -1,5 +1,7 @@
 import React from 'react'
-
+import plane from '//Glocalship/public/assets/img/illustration/paper-plane.png';
+import illustration from '//Glocalship/public/assets/img/illustration/illustration.avif';
+import { FaUser, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 function Contact() {
   return (
     <div>

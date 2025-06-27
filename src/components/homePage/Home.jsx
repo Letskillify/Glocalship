@@ -9,11 +9,13 @@ import WorkSection from './WorkSection'
 import FaqSection from './FaqSection'
 import CallSection from './callSection'
 import Contact from './Contact'
+import Banner from './Banner'
 
 function Home() {
   return (
     <div>
-        <HeroSection/>
+        {/* <HeroSection/> */}
+        <Banner/>
         <About/>
         <Stats/>
         <ServiceSection/>

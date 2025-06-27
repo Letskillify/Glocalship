@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FaUser, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 function Contact() {
   return (

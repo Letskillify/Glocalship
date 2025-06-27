@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase/firebaseConfig';
 import { signOut } from 'firebase/auth';
 
-
 function Header() {
   const user = auth.currentUser;
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [showHeader, setShowHeader] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
 
   const handleLogout = () => {
     signOut(auth);
@@ -16,13 +17,43 @@ function Header() {
     setIsNavCollapsed(!isNavCollapsed);
   };
 
+  useEffect(() => {
+    let timeoutId = null;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      // Smoothly check scroll difference
+      if (Math.abs(currentScrollPos - prevScrollPos) > 10) {
+        if (currentScrollPos < prevScrollPos) {
+          setShowHeader(true);
+        } else {
+          setShowHeader(false);
+        }
+        setPrevScrollPos(currentScrollPos);
+      }
+
+      // Debounce: Clear previous timeout and set new one
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setPrevScrollPos(window.scrollY);
+      }, 200);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <header className='sticky-top shadow-sm' style={{ backgroundColor: 'var(--primary)' }}>
-      <nav className=" container navbar navbar-expand-md navbar-light container-fluid px-2">
+    <header
+      className={`custom-header shadow-sm ${showHeader ? 'show' : 'hide'}`}
+      style={{ backgroundColor: 'var(--primary)' }}
+    >
+      <nav className="container navbar navbar-expand-md navbar-light container-fluid px-2">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <h5 className="mb-0 fw-bold " style={
-            { color: 'var(--secondary)' }
-          }>Glocalship</h5>
+          <h5 className="mb-0 fw-bold">
+            Glocalship
+          </h5>
         </Link>
 
         <button
@@ -36,9 +67,12 @@ function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${!isNavCollapsed ? 'show' : ''}`} id="navbarNav" >
-
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center" >
+        <div
+          className={` toggleCollapse collapse navbar-collapse ${!isNavCollapsed ? 'show' : ''
+            }`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
             <li className="nav-item">
               <Link className="nav-link" to="">Home</Link>
             </li>
@@ -56,14 +90,13 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="">
-                <span><i class="fa-solid fa-user "></i>
+                <span>
+                  <i className="fa-solid fa-user"></i>
                 </span>
               </Link>
-
             </li>
           </ul>
         </div>
-
       </nav>
     </header>
   );

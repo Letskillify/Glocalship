@@ -1,119 +1,77 @@
-import React from 'react'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const data = [
+  {
+    image: "/images/delivery-1.png",
+    title: "Global Delivery",
+  },
+  {
+    image: "/images/delivery-2.jpg",
+    title: "Real-Time Tracking",
+  },
+  {
+    image: "/images/delivery-3.jpg",
+    title: "Secure Packaging",
+  },
+  {
+    image: "/images/delivery-4.jpg",
+    title: "Fast Shipping",
+  },
+  {
+    image: "/images/delivery-5.jpg",
+    title: "Customer Support",
+  },
+];
+
 
 function ServiceSection() {
+
+    const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+
   return (
-    <div>
-       <section id="services" className="services section">
-
-   
-      <div className="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div className="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div className="services-row">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="services-headline" data-aos="fade-up">
-                <p className="services-subtitle">Expert Guidance</p>
-                <h2 className="services-title">Innovative Solutions We Provide</h2>
-              </div>
-
-              <div className="services-description" data-aos="fade-up" data-aos-delay="100">
-                <p>Our team delivers cutting-edge strategies to help you achieve your goals. Discover how our tailored services can benefit your business.</p>
-              </div>
-
-              <div className="services-image-container" data-aos="fade-up" data-aos-delay="200">
-                <div className="services-image">
-                  <img src="assets/img/services/services-12.webp" alt="Services" className="img-fluid"/>
+     <div className="slider-section">
+      <h2 className="slider-heading">Our Services</h2>
+      <div className="slider-wrapper">
+        <Slider {...settings}>
+          {data.map((item, index) => (
+            <div key={index} className="slide-card">
+              <div className="image-wrapper">
+                <img src={item.image} alt={item.title} />
+                <div className="overlay">
+                  <p className="overlay-title">{item.title}</p>
                 </div>
               </div>
             </div>
-
-            <div className="col-lg-8">
-              <div className="services-grid">
-                <div className="row gy-4">
-                
-                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div className="service-card">
-                      <div className="service-content text-center">
-                        <div className="service-icon">
-                          <i className="bi bi-cash-stack"></i>
-                        </div>
-                        <div className="service-info">
-                          <h3><a href="#">Strategic Planning</a></h3>
-                          <p>We offer customized plans to optimize your operations and improve overall efficiency across the board.</p>
-                          <div className="service-action">
-                            <a href="service-details.html" className="read-more-btn">Details <i className="bi bi-arrow-right"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                 
-                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div className="service-card">
-                      <div className="service-content text-center">
-                        <div className="service-icon">
-                          <i className="bi bi-list-check"></i>
-                        </div>
-                        <div className="service-info">
-                          <h3><a href="#">Digital Marketing</a></h3>
-                          <p>Our expert team crafts engaging campaigns that connect with your audience and drive conversions effectively.</p>
-                          <div className="service-action">
-                            <a href="service-details.html" className="read-more-btn">View More <i className="bi bi-arrow-right"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                 
-                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div className="service-card">
-                      <div className="service-content text-center">
-                        <div className="service-icon">
-                          <i className="bi bi-bar-chart"></i>
-                        </div>
-                        <div className="service-info">
-                          <h3><a href="#">Performance Analysis</a></h3>
-                          <p>We analyze your data to provide actionable insights, helping you make informed decisions for future growth.</p>
-                          <div className="service-action">
-                            <a href="service-details.html" className="read-more-btn">Read More <i className="bi bi-arrow-right"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div className="service-card">
-                      <div className="service-content text-center">
-                        <div className="service-icon">
-                          <i className="bi bi-pie-chart"></i>
-                        </div>
-                        <div className="service-info">
-                          <h3><a href="#">Market Research</a></h3>
-                          <p>Understanding your market is key, and we provide comprehensive research to give you a competitive edge.</p>
-                          <div className="service-action">
-                            <a href="service-details.html" className="read-more-btn">Learn More <i className="bi bi-arrow-right"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+          ))}
+        </Slider>
       </div>
-
-    </section>
     </div>
   )
 }

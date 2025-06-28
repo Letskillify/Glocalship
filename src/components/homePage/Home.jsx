@@ -10,6 +10,7 @@ import FaqSection from './FaqSection'
 import CallSection from './callSection'
 import Contact from './Contact'
 import Banner from './Banner'
+import Steps from './Steps'
 
 function Home() {
   return (
@@ -19,10 +20,12 @@ function Home() {
         <About/>
         <Stats/>
         <ServiceSection/>
+        
         <Clients/>
         <Tastimonilas/>
         <WorkSection/>
         <FaqSection/>
+        <Steps/>
         <CallSection/>
         <Contact/>
         

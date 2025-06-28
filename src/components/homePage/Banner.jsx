@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from "react";
 
-
 const Banner = () => {
     const [activeTab, setActiveTab] = useState("mobile");
     const [inputValue, setInputValue] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const [banner, setBanner] = useState("DeliveryImg!.png");
+    const images = [
+        "delivery3.jpg.jpg",
+        "delivery4.jpg.jpg",
+        "delivery6.jpg.jpg"
+    ];
 
-    // Auto banner change every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setBanner((prevBanner) =>
-                prevBanner === "DeliveryImg!.png" ? "DeliveryImg2.png" : "DeliveryImg!.png"
-            );
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 3000);
 
-        return () => clearInterval(interval); // cleanup on unmount
-    }, []);
-
+        return () => clearInterval(interval);
+    }, [images.length]);
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
         setInputValue("");
     };
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,7 +33,7 @@ const Banner = () => {
         <div
             className="banner"
             style={{
-                backgroundImage: `url(/assets/img/Banner/${banner})`,
+                backgroundImage: `url(/assets/img/Banner/${images[currentIndex]})`,
             }}
         >
             <div className="bannerArea">
@@ -48,19 +47,19 @@ const Banner = () => {
                             Mobile
                         </button>
                         <button
-                             className={`active ${activeTab === "awb" ? "active" : ""}`}
+                            className={`active ${activeTab === "awb" ? "active" : ""}`}
                             onClick={() => handleTabChange("awb")}
                         >
                             AWB
                         </button>
                         <button
-                            className={`active ${activeTab === "order id" ? "active" : ""}`}
+                            className={`active ${activeTab === "orderId" ? "active" : ""}`}
                             onClick={() => handleTabChange("orderId")}
                         >
                             Order Id
                         </button>
                         <button
-                           className={`active ${activeTab === "lrn" ? "active" : ""}`}
+                            className={`active ${activeTab === "lrn" ? "active" : ""}`}
                             onClick={() => handleTabChange("lrn")}
                         >
                             LRN

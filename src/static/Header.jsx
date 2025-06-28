@@ -56,6 +56,7 @@ function Header() {
           </h5>
         </Link>
 
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -64,11 +65,16 @@ function Header() {
           aria-expanded={!isNavCollapsed}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          {isNavCollapsed ? (
+            <span className="navbar-toggler-icon"></span>
+          ) : (
+            <i className="fa-solid fa-xmark fs-2 text-white"></i>
+          )}
         </button>
 
+
         <div
-          className={` toggleCollapse collapse navbar-collapse ${!isNavCollapsed ? 'show' : ''
+          className={` toggleCollapse navbar-collapse ${!isNavCollapsed ? 'show' : ''
             }`}
           id="navbarNav"
         >

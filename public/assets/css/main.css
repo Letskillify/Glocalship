@@ -316,10 +316,10 @@ h6 {
 
 /* Collapse container */
 .toggleCollapse {
-  overflow: hidden;
   max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transition: max-height 0.45s ease, opacity 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
 
@@ -350,7 +350,7 @@ h6 {
 }
 
 
-  /* respnsive  */
+/* respnsive  */
 @media (min-width: 768px) {
   .toggleCollapse {
     max-height: none;
@@ -1746,9 +1746,9 @@ section,
 # Banner Section
 --------------------------------------------------------------*/
 
-/* Banner Section */
+
 .banner {
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1760,6 +1760,8 @@ section,
   transition: background-image 0.5s ease-in-out;
 }
 
+
+
 .bannerArea {
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -1769,7 +1771,7 @@ section,
   margin-right: 10%;
 }
 
-/* Tabs Button Common Style */
+
 .active {
   flex: 1;
   padding: 8px 10px;
@@ -1784,14 +1786,14 @@ section,
   margin: 0 4px;
 }
 
-/* Hover Effect */
+
 .active:hover {
   background: #e6e6e6;
 }
 
-/* Form Inputs */
+
 .inputBox {
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 12px;
   width: 100%;
   border-radius: 5px;
@@ -1799,7 +1801,7 @@ section,
   font-size: 14px;
 }
 
-/* Submit Button */
+
 .submit {
   padding: 12px;
   width: 100%;
@@ -1817,13 +1819,203 @@ section,
   background: #e60000;
 }
 
-/* Tabs Container (Optional spacing) */
+
 .tabs {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
+/* ==============================
+   Responsive 
+===============================*/
 
+
+@media (max-width: 991px) {
+  .banner {
+    padding: 0 30px;
+    justify-content: center;
+  }
+
+  .bannerArea {
+    width: 80%;
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .bannerArea {
+    width: 75%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .active {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .inputBox {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Steps Section
+--------------------------------------------------------------*/
+.stepsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.ydc-step {
+  text-align: center;
+ padding: 25px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 195px;
+  transition: border-color 0.3s ease;
+  box-shadow: 0.3s ease;
+  background: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.stepNumber {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.stepDesc {
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 0 5px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.ydc-step:hover {
+  border-color: #facc15;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 8px #facc15;
+}
+
+.ydc-step:hover .ydc-stepTitle {
+  color: #facc15;
+}
+
+.ydc-step:hover .ydc-stepDesc {
+  color: #eee;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .ydc-step {
+    width: 195px;
+    height: 195px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 32px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 16px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .ydc-step {
+    width: 185px;
+    height: 185px;
+    padding: 25px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 28px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 14px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 11px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .ydc-step {
+    width: 185px;
+    height: 185px;
+    padding: 20px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 24px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 12px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 10px;
+  }
+
+}
 
 
 /*--------------------------------------------------------------

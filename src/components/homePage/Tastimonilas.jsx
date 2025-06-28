@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 
 
-const Tastimonilas = [
+const Testimonials = [
     {
       id: 1,
       name: 'James Wilson',
@@ -84,7 +84,7 @@ const Testimo = () => {
       <div className="section-underline"></div>
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
-          {testimonials.map((testimonial) => (
+          {Testimonials.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-slide">
               <div className="testimonial-card">
                 <div className="testimonial-image">
@@ -112,4 +112,4 @@ const Testimo = () => {
   )
 }
 
-export default Tastimonilas
+export default Testimo;

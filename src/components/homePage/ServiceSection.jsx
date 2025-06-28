@@ -4,23 +4,23 @@ import Slider from "react-slick";
 
 const data = [
   {
-    image: "/images/delivery-1.png",
+    image: "/assets/img/services/delivery-1.png",
     title: "Global Delivery",
   },
   {
-    image: "/images/delivery-2.jpg",
+    image: "/assets/img/services/delivery-2.jpg",
     title: "Real-Time Tracking",
   },
   {
-    image: "/images/delivery-3.jpg",
+    image: "/assets/img/services/delivery-3.jpg",
     title: "Secure Packaging",
   },
   {
-    image: "/images/delivery-4.jpg",
+    image: "/assets/img/services/delivery-4.jpg",
     title: "Fast Shipping",
   },
   {
-    image: "/images/delivery-5.jpg",
+    image: "/assets/img/services/delivery-5.jpg",
     title: "Customer Support",
   },
 ];

@@ -1469,7 +1469,9 @@ section,
 
 /*--------------------------------------------------------------
 # Services Section
---------------------------------------------------------------*/.slider-section {
+--------------------------------------------------------------*/
+
+.slider-section {
   width: 100%;
   padding: 60px 20px;
   background-color: #f9fafb;
@@ -1512,14 +1514,18 @@ section,
   transform: scale(1.05);
 }
 
+
 .overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%; /* Cover full image */
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  text-align: center;
-  padding: 15px 10px;
+  display: flex; /* Flex for centering */
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1529,9 +1535,12 @@ section,
 }
 
 .overlay-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  text-align: center;
+  padding: 10px 20px;
 }
+
 
 /*--------------------------------------------------------------
 # Clients Section

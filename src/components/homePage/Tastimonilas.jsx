@@ -1,179 +1,113 @@
-import React from 'react'
-import Data from "../../Data.json"
-function Tastimonilas() {
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+
+
+const Tastimonilas = [
+    {
+      id: 1,
+      name: 'James Wilson',
+      role: 'Small Business Owner',
+      content: 'The fastest parcel delivery service I\'ve ever used. Package arrived before expected!',
+      rating: 5,
+      image: 'https://placehold.co/100x100?text=James+W&font=roboto'
+    },
+    {
+      id: 2,
+      name: 'Maria Garcia',
+      role: 'E-commerce Store Manager',
+      content: 'Reliable and affordable. Our shipping costs dropped by 30% with their bulk discounts.',
+      rating: 5,
+      image: 'https://placehold.co/100x100?text=Maria+G&font=roboto'
+    },
+    {
+      id: 3,
+      name: 'David Kim',
+      role: 'Frequent Shipper',
+      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      rating: 4,
+      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+    },
+    {
+      id: 4,
+      name: 'Lisa Choky',
+      role: 'Online Seller',
+      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      rating: 5,
+      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+    },
+    {
+      id: 5,
+      name: 'Chin Yuon',
+      role: 'Online Seller',
+      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      rating: 5,
+      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+    },
+    {
+      id: 6,
+      name: 'Advert Johnson',
+      role: 'Online Seller',
+      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      rating: 5,
+      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+    },
+  ];
+
+const Testimo = () => {
+
+   const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+  };
+
   return (
-    <div>
- <section id="testimonials" className="testimonials section">
 
-     
-      <div className="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div className="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div className="row g-4">
-       
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-m-3.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>Michael Anderson</h5>
-                    <span>Software Developer</span>
-                  </div>
+       <div className="testimonial-container">
+      <h1 className="section-title">Testimonials</h1>
+      <div className="section-underline"></div>
+      <div className="testimonial-slider-wrapper">
+        <Slider {...settings}>
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="testimonial-slide">
+              <div className="testimonial-card">
+                <div className="testimonial-image">
+                  <img src={testimonial.image} alt={`Portrait of ${testimonial.name}`} />
                 </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
+                <div className="testimonial-content">
+                  <div className="testimonial-rating">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="star">★</span>
+                    ))}
+                  </div>
+                  <p className="testimonial-text">"{testimonial.content}"</p>
+                  <div className="testimonial-author">
+                    <h3>{testimonial.name}</h3>
+                    <p>{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-f-5.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>Sophia Martinez</h5>
-                    <span>Marketing Specialist</span>
-                  </div>
-                </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-m-7.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>David Wilson</h5>
-                    <span>Graphic Designer</span>
-                  </div>
-                </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-f-9.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>Emily Johnson</h5>
-                    <span>UX Designer</span>
-                  </div>
-                </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-f-11.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>Olivia Thompson</h5>
-                    <span>Entrepreneur</span>
-                  </div>
-                </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div className="testimonial-item">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-              </div>
-              <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-              <div className="testimonial-footer">
-                <div className="testimonial-author">
-                  <img src="assets/img/person/person-m-12.webp" alt="Author" className="img-fluid rounded-circle" loading="lazy"/>
-                  <div>
-                    <h5>James Taylor</h5>
-                    <span>Financial Analyst</span>
-                  </div>
-                </div>
-                <div className="quote-icon">
-                  <i className="bi bi-quote"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+          ))}
+          </Slider>
 
       </div>
-
-    </section>
     </div>
   )
 }

@@ -2749,8 +2749,6 @@ section,
 .contact .container {
   max-width: 1200px;
 }
-
-
 .contact-card {
   display: flex;
   flex-direction: row;
@@ -2818,7 +2816,7 @@ section,
   flex: 1 1 120px;
   padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-right: 8px;
   font-size: 1rem;
   min-width: 0;

@@ -251,16 +251,18 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-
 .custom-header {
   position: sticky;
   top: 0;
   z-index: 1020;
-  background-color: var(--primary);
-  transition: top 0.4s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--accent-color);
+  transition: top 0.4s ease;
+  opacity: 0.3s ease;
+   box-shadow: 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
+    font-family: var(--default-font); 
 
+}
 
 .custom-header.hide {
   top: -80px;
@@ -272,32 +274,30 @@ h6 {
   opacity: 1;
 }
 
-
 .navbar-brand h5 {
   font-size: 1.7rem;
   letter-spacing: 0.5px;
   color: var(--secondary);
 }
 
-
 .navbar-nav .nav-link {
   font-weight: 500;
   color: #ffffff;
   padding: 10px 15px;
   border-radius: 8px;
-  transition: all 0.35s ease;
   border: 1px solid transparent;
+  display: inline-block;
+  transition: all 0.4s ease;
+  transform-origin: center;
 }
-
 
 .navbar-nav .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--secondary);
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+  transform: rotate(-8deg) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-
 
 .navbar-toggler {
   border: none;
@@ -322,12 +322,10 @@ h6 {
   transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
-
 .toggleCollapse.show {
   max-height: 500px;
   opacity: 1;
 }
-
 
 .toggleCollapse .nav-link {
   opacity: 0;
@@ -340,7 +338,6 @@ h6 {
   transform: translateY(0);
 }
 
-
 .toggleCollapse .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -349,8 +346,7 @@ h6 {
   padding: 10px 0;
 }
 
-
-/* respnsive  */
+/* Responsive  */
 @media (min-width: 768px) {
   .toggleCollapse {
     max-height: none;
@@ -370,6 +366,7 @@ h6 {
     transform: none;
   }
 }
+
 
 /* Global Header on Scroll
 ------------------------------*/
@@ -3367,3 +3364,330 @@ input[type="email"]:focus {
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+#AdminLogin Section Section
+--------------------------------------------------------------*/
+.admin-login-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.admin-login-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.admin-login-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.admin-login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.admin-login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.admin-login-form input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  background-color:var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #e63946;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+/*--------------------------------------------------------------
+#Login Section Section
+--------------------------------------------------------------*/
+
+
+.login-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.login-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 0.9rem 0.8rem 2.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-size: 0.95rem;
+  transition: 0.3s;
+    padding-left: 2.5rem;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  background: #fff;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0056d2;
+}
+
+.link-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.link-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+.status-msg {
+  color: #d9534f;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.social-icons i {
+  color: #007bff;
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+
+
+/*--------------------------------------------------------------
+#sinup Section Section
+--------------------------------------------------------------*/
+
+
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.signup-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  padding: 30px;
+  text-align: center;
+}
+
+.signup-card h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.google-btn {
+  background: white;
+  color: #333;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn img {
+  width: 20px;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #777;
+}
+
+.email-toggle-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-toggle-btn:hover {
+  background: #0056b3;
+}
+
+.email-form {
+  margin-top: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.signup-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: #218838;
+}
+
+.signup-status {
+  background: #e9f7fd;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+

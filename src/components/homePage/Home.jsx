@@ -12,11 +12,15 @@ import CallSection from './callSection'
 import Contact from './Contact'
 import Banner from './Banner'
 import Steps from './Steps'
+import Login from '../../pages/Login'
+import Signup from '../../pages/Signup'
 
 function Home() {
   return (
     <div>
       {/* <HeroSection/> */}
+      {/* <Login/> */}
+      {/* <Signup/> */}
       <Banner />
       <About />
       <Stats />

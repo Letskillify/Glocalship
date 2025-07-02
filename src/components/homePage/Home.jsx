@@ -19,8 +19,8 @@ function Home() {
   return (
     <div>
       {/* <HeroSection/> */}
-      <Login/>  
-      <Signup/>
+      {/* <Login/>   */}
+      {/* <Signup/> */}
       <Banner />
       <About />
       <Stats />

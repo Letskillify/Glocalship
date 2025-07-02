@@ -1806,7 +1806,7 @@ section,
 .submit {
   padding: 12px;
   width: 100%;
-  background: #ff0000;
+  background: var(--accent-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -1833,53 +1833,56 @@ section,
 ===============================*/
 
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .banner {
     padding: 0 30px;
-    justify-content: center;
   }
 
   .bannerArea {
-    width: 80%;
-    margin-right: 0;
+    width: 350px;
+    margin-right: 5%;
   }
 }
 
-
-@media (max-width: 576px) {
-  .bannerArea {
-    width: 75%;
-    padding: 15px;
+@media (max-width: 768px) {
+  .banner {
+    justify-content: center;
+    padding: 0 20px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .bannerArea {
+    width: 90%;
+    margin: 0;
   }
 
   .tabs {
     flex-direction: column;
-    gap: 5px;
   }
 
   .active {
     width: 100%;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-
-  .inputBox {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .submit {
+    margin: 4px 0;
     font-size: 15px;
-    padding: 12px 0;
   }
 }
 
+@media (max-width: 480px) {
+  .bannerArea {
+    padding: 15px;
+  }
 
+  .inputBox {
+    font-size: 13px;
+  }
+
+  .submit {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Steps Section

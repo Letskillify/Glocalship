@@ -258,9 +258,9 @@ h6 {
   background-color: var(--accent-color);
   transition: top 0.4s ease;
   opacity: 0.3s ease;
-   box-shadow: 0.3s ease;
+  box-shadow: 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    font-family: var(--default-font); 
+  font-family: var(--default-font);
 
 }
 
@@ -281,23 +281,23 @@ h6 {
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid transparent;
   display: inline-block;
-  transition: all 0.4s ease;
-  transform-origin: center;
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  margin: 0;
+  position: relative;
+  transition: all 0.15s cubic-bezier(0.55, 0.05, 0.67, 0.19);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--secondary);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: rotate(-8deg) scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  color: var(--default-color);
+  transform: translateY(-5px);
 }
+
+
+
 
 .navbar-toggler {
   border: none;
@@ -645,7 +645,7 @@ h6 {
 
 .footer {
   background-color: #1f2937;
-  color: #f9fafb; 
+  color: #f9fafb;
   padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -713,6 +713,7 @@ hr {
   color: #9ca3af;
   font-size: 0.9rem;
 }
+
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -1514,7 +1515,7 @@ section,
 .slider-heading {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937; 
+  color: #1f2937;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1553,10 +1554,12 @@ section,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Cover full image */
+  height: 100%;
+  /* Cover full image */
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  display: flex; /* Flex for centering */
+  display: flex;
+  /* Flex for centering */
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -1893,7 +1896,7 @@ section,
 
 .ydc-step {
   text-align: center;
- padding: 25px;
+  padding: 25px;
   border: 3px solid #fff;
   border-radius: 50%;
   width: 200px;
@@ -2035,11 +2038,11 @@ section,
 }
 
 .section-underline {
-   width: 5%;
-   height: 3px;
-   background-color: #f85d23;
-   margin: 0 auto; 
-   border-radius: 2px; 
+  width: 5%;
+  height: 3px;
+  background-color: #f85d23;
+  margin: 0 auto;
+  border-radius: 2px;
 }
 
 .testimonial-card {
@@ -2257,6 +2260,7 @@ section,
     font-size: 0.95rem;
   }
 }
+
 /*--------------------------------------------------------------
 # whyWorkWithUs Section
 --------------------------------------------------------------*/
@@ -2288,6 +2292,7 @@ section,
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (min-width: 900px) {
   .whyshop-features {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2298,7 +2303,7 @@ section,
   background: #fff;
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s;
 }
@@ -2308,11 +2313,11 @@ section,
 }
 
 .whyshop-icon img {
-    margin: 0 auto;
+  margin: 0 auto;
   width: 58px;
   height: 58px;
   margin-bottom: 1rem;
- 
+
 }
 
 .whyshop-card-title {
@@ -2330,81 +2335,82 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
- .faq-main {
-     display: flex;
-     flex-direction: column;
-     gap: 32px;
-     padding: 24px;
-     max-width: 1100px;
-     margin: 0 auto;
- }
+.faq-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
- @media (min-width: 900px) {
-     .faq-main {
-         flex-direction: row;
-         align-items: flex-start;
-     }
- }
+@media (min-width: 900px) {
+  .faq-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
 
- .faq-list {
-     width: 100%;
-     max-width: 600px;
- }
+.faq-list {
+  width: 100%;
+  max-width: 600px;
+}
 
- .faq-item {
-     border-bottom: 1px solid #e0e0e0;
-     padding: 16px 0;
-     transition: box-shadow 0.2s, border-radius 0.2s;
- }
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+  transition: box-shadow 0.2s, border-radius 0.2s;
+}
 
- .faq-item:hover {
-     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-     border-radius: 8px;
- }
+.faq-item:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
 
- .faq-question {
-    margin-left: 5px;
-     background: none;
-     border: none;
-     width: 100%;
-     text-align: left;
-     font-size: 1.1rem;
-     font-weight: 600;
-     color: #333;
-     cursor: pointer;
-     outline: none;
-     transition: color 0.2s;
-     padding: 2px;
+.faq-question {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+  padding: 2px;
 
- }
+}
 
- .faq-question:hover {
-     color: #e84d26;
-     transform: translateY(-2px);
- }
+.faq-question:hover {
+  color: #e84d26;
+  transform: translateY(-2px);
+}
 
- .faq-answer {
-    margin-left: 5px;
-     margin-top: 10px;
-     color: #555;
-     font-size: 1rem;
-     line-height: 1.6;
- }
+.faq-answer {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
- .faq-video {
-     width: 100%;
-     max-width: 520px;
-     margin: 0 auto;
- }
+.faq-video {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
 
- .faq-video iframe {
-     width: 100%;
-     height: 320px;
-     border-radius: 12px;
-     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-     border: none;
-     
- }
+.faq-video iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: none;
+
+}
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -2746,6 +2752,7 @@ section,
 .contact .container {
   max-width: 1200px;
 }
+
 .contact-card {
   display: flex;
   flex-direction: row;
@@ -3422,7 +3429,7 @@ input[type="email"]:focus {
 
 .login-btn {
   width: 100%;
-  background-color:var(--accent-color);
+  background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 12px 0;
@@ -3449,11 +3456,22 @@ input[type="email"]:focus {
 #Login Section Section
 --------------------------------------------------------------*/
 
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+}
+
 
 .login-container {
   background: #ffffff;
   border-radius: 16px;
   padding: 2rem 2.2rem;
+  text-align: center;
   max-width: 420px;
   width: 100%;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
@@ -3486,7 +3504,7 @@ input[type="email"]:focus {
   background: #f9f9f9;
   font-size: 0.95rem;
   transition: 0.3s;
-    padding-left: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .input-group input:focus {
@@ -3564,6 +3582,53 @@ input[type="email"]:focus {
 
 
 /*--------------------------------------------------------------
+#responsive
+--------------------------------------------------------------*/
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem 1.5rem;
+    max-width: 95%;
+  }
+
+  .login-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-container p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-group input {
+    padding: 0.7rem 0.8rem 0.7rem 2.2rem;
+    font-size: 0.9rem;
+  }
+
+  .input-icon {
+    font-size: 0.9rem;
+    left: 0.7rem;
+  }
+
+  .login-btn {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .link-text {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icons i {
+    font-size: 1.1rem;
+  }
+}
+
+
+/*--------------------------------------------------------------
 #sinup Section Section
 --------------------------------------------------------------*/
 
@@ -3580,9 +3645,10 @@ input[type="email"]:focus {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-width: 420px;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
+  width: 100%;
+  max-width: 420px;
 }
 
 .signup-card h2 {
@@ -3689,5 +3755,62 @@ input[type="email"]:focus {
 
 .login-link a:hover {
   text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+#Responsive
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .signup-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .google-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .google-btn img {
+    width: 18px;
+  }
+
+  .divider {
+    margin: 15px 0;
+    font-size: 0.9rem;
+  }
+
+  .email-toggle-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .signup-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .signup-status {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .login-link {
+    margin-top: 15px;
+    font-size: 0.85rem;
+  }
 }
 

@@ -23,42 +23,45 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <p>Access your delivery dashboard</p>
+    <div className="login-page">
 
-      <form onSubmit={handleLogin}>
-        <div className="input-group">
-          <FaEnvelope className="input-icon" />
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+      <div className="login-container">
+        <h2>Login</h2>
+        <p>Access your delivery dashboard</p>
 
-        <div className="input-group">
-          <FaLock className="input-icon" />
-          <input
-            type="password"
-            placeholder="Your Password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <FaEnvelope className="input-icon" />
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        {status && <div className="status-msg">{status}</div>}
+          <div className="input-group">
+            <FaLock className="input-icon" />
+            <input
+              type="password"
+              placeholder="Your Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-        <button type="submit" className="login-btn">Login</button>
+          {status && <div className="status-msg">{status}</div>}
 
-        <div className="link-text">
-          <p>New user? <Link to="/signup">Signup</Link></p>
-          <p>Admin? <Link to="/admin/login">Login here</Link></p>
-        </div>
-      </form>
+          <button type="submit" className="login-btn">Login</button>
+
+          <div className="link-text">
+            <p>New user? <Link to="/signup">Signup</Link></p>
+            <p>Admin? <Link to="/admin/login">Login here</Link></p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -47,7 +47,6 @@ function Header() {
   return (
     <header
       className={`custom-header shadow-sm ${showHeader ? 'show' : 'hide'}`}
-      style={{ backgroundColor: 'var(--primary)' }}
     >
       <nav className="container navbar navbar-expand-md navbar-light container-fluid px-2">
         <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -56,7 +55,7 @@ function Header() {
           </h5>
         </Link>
 
-        
+
         <button
           className="navbar-toggler"
           type="button"
@@ -93,6 +92,9 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="">Track Parcel</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="">Contect</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="">

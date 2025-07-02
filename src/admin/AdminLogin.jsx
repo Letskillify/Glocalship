@@ -1,11 +1,11 @@
-// src/pages/AdminLogin.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 const ADMIN_ID = "admin123";
 const ADMIN_PASSWORD = "admin@123";
 
-const AdminLogin = () => {
+const AdminLoginForm = () => {
   const [adminId, setAdminId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -14,7 +14,6 @@ const AdminLogin = () => {
   const handleAdminLogin = (e) => {
     e.preventDefault();
     if (adminId === ADMIN_ID && password === ADMIN_PASSWORD) {
-      // Save admin login flag in sessionStorage (or localStorage)
       sessionStorage.setItem("isAdminLoggedIn", "true");
       navigate("/admin/dashboard");
     } else {
@@ -23,32 +22,38 @@ const AdminLogin = () => {
   };
 
   return (
-    <div style={{ padding: 30, maxWidth: 400, margin: "auto" }}>
-      <h2>Admin Login</h2>
-      <form onSubmit={handleAdminLogin}>
-        <input
-          type="text"
-          placeholder="Admin ID"
-          value={adminId}
-          onChange={(e) => setAdminId(e.target.value)}
-          required
-          style={{ width: "100%", marginBottom: 10, padding: 8 }}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          style={{ width: "100%", marginBottom: 10, padding: 8 }}
-        />
-        <button type="submit" style={{ width: "100%", padding: 10 }}>
-          Login
-        </button>
-        {error && <p style={{ color: "red", marginTop: 10 }}>{error}</p>}
-      </form>
+    <div className="admin-login-container">
+      <div className="admin-login-card">
+        <h2 className="admin-login-title">Admin Login</h2>
+        <form onSubmit={handleAdminLogin} className="admin-login-form">
+          <div className="form-group">
+            <label>Admin ID</label>
+            <input
+              type="text"
+              placeholder="Enter Admin ID"
+              value={adminId}
+              onChange={(e) => setAdminId(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
+          {error && <p className="error-message">{error}</p>}
+        </form>
+      </div>
     </div>
   );
 };
 
-export default AdminLogin;
+export default AdminLoginForm;

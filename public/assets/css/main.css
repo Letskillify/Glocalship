@@ -251,16 +251,18 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-
 .custom-header {
   position: sticky;
   top: 0;
   z-index: 1020;
-  background-color: var(--primary);
-  transition: top 0.4s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--accent-color);
+  transition: top 0.4s ease;
+  opacity: 0.3s ease;
+  box-shadow: 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
+  font-family: var(--default-font);
 
+}
 
 .custom-header.hide {
   top: -80px;
@@ -272,31 +274,29 @@ h6 {
   opacity: 1;
 }
 
-
 .navbar-brand h5 {
   font-size: 1.7rem;
   letter-spacing: 0.5px;
   color: var(--secondary);
 }
 
-
 .navbar-nav .nav-link {
+  display: inline-block;
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  margin: 0;
+  position: relative;
+  transition: all 0.15s cubic-bezier(0.55, 0.05, 0.67, 0.19);
+  text-decoration: none;
   font-weight: 500;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.35s ease;
-  border: 1px solid transparent;
 }
-
 
 .navbar-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--secondary);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+  color: var(--default-color);
+  transform: translateY(-5px);
 }
+
+
 
 
 .navbar-toggler {
@@ -316,18 +316,16 @@ h6 {
 
 /* Collapse container */
 .toggleCollapse {
-  overflow: hidden;
   max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transition: max-height 0.45s ease, opacity 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
-
 
 .toggleCollapse.show {
   max-height: 500px;
   opacity: 1;
 }
-
 
 .toggleCollapse .nav-link {
   opacity: 0;
@@ -340,7 +338,6 @@ h6 {
   transform: translateY(0);
 }
 
-
 .toggleCollapse .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -349,8 +346,7 @@ h6 {
   padding: 10px 0;
 }
 
-
-  /* respnsive  */
+/* Responsive  */
 @media (min-width: 768px) {
   .toggleCollapse {
     max-height: none;
@@ -370,6 +366,7 @@ h6 {
     transform: none;
   }
 }
+
 
 /* Global Header on Scroll
 ------------------------------*/
@@ -648,7 +645,7 @@ h6 {
 
 .footer {
   background-color: #1f2937;
-  color: #f9fafb; 
+  color: #f9fafb;
   padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -716,6 +713,7 @@ hr {
   color: #9ca3af;
   font-size: 0.9rem;
 }
+
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -847,6 +845,7 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  font-size: medium;
 }
 
 /*--------------------------------------------------------------
@@ -1516,7 +1515,7 @@ section,
 .slider-heading {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937; 
+  color: #1f2937;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1555,10 +1554,12 @@ section,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Cover full image */
+  height: 100%;
+  /* Cover full image */
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  display: flex; /* Flex for centering */
+  display: flex;
+  /* Flex for centering */
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -1746,9 +1747,9 @@ section,
 # Banner Section
 --------------------------------------------------------------*/
 
-/* Banner Section */
+
 .banner {
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1760,6 +1761,8 @@ section,
   transition: background-image 0.5s ease-in-out;
 }
 
+
+
 .bannerArea {
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -1769,7 +1772,7 @@ section,
   margin-right: 10%;
 }
 
-/* Tabs Button Common Style */
+
 .active {
   flex: 1;
   padding: 8px 10px;
@@ -1784,14 +1787,14 @@ section,
   margin: 0 4px;
 }
 
-/* Hover Effect */
+
 .active:hover {
   background: #e6e6e6;
 }
 
-/* Form Inputs */
+
 .inputBox {
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 12px;
   width: 100%;
   border-radius: 5px;
@@ -1799,11 +1802,11 @@ section,
   font-size: 14px;
 }
 
-/* Submit Button */
+
 .submit {
   padding: 12px;
   width: 100%;
-  background: #ff0000;
+  background: var(--accent-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -1817,13 +1820,206 @@ section,
   background: #e60000;
 }
 
-/* Tabs Container (Optional spacing) */
+
 .tabs {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
+/* ==============================
+   Responsive 
+===============================*/
 
+
+@media (max-width: 1024px) {
+  .banner {
+    padding: 0 30px;
+  }
+
+  .bannerArea {
+    width: 350px;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    justify-content: center;
+    padding: 0 20px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .bannerArea {
+    width: 90%;
+    margin: 0;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .active {
+    width: 100%;
+    margin: 4px 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerArea {
+    padding: 15px;
+  }
+
+  .inputBox {
+    font-size: 13px;
+  }
+
+  .submit {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Steps Section
+--------------------------------------------------------------*/
+.stepsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.ydc-step {
+  text-align: center;
+  padding: 25px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 195px;
+  transition: border-color 0.3s ease;
+  box-shadow: 0.3s ease;
+  background: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.stepNumber {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.stepDesc {
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 0 5px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.ydc-step:hover {
+  border-color: #facc15;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 8px #facc15;
+}
+
+.ydc-step:hover .ydc-stepTitle {
+  color: #facc15;
+}
+
+.ydc-step:hover .ydc-stepDesc {
+  color: #eee;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .ydc-step {
+    width: 195px;
+    height: 195px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 32px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 16px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .ydc-step {
+    width: 185px;
+    height: 185px;
+    padding: 25px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 28px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 14px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 11px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .ydc-step {
+    width: 185px;
+    height: 185px;
+    padding: 20px;
+  }
+
+  .ydc-stepNumber {
+    font-size: 24px;
+  }
+
+  .ydc-stepTitle {
+    font-size: 12px;
+  }
+
+  .ydc-stepDesc {
+    font-size: 10px;
+  }
+
+}
 
 
 /*--------------------------------------------------------------
@@ -1845,11 +2041,11 @@ section,
 }
 
 .section-underline {
-   width: 5%;
-   height: 3px;
-   background-color: #f85d23;
-   margin: 0 auto; 
-   border-radius: 2px; 
+  width: 5%;
+  height: 3px;
+  background-color: #f85d23;
+  margin: 0 auto;
+  border-radius: 2px;
 }
 
 .testimonial-card {
@@ -2069,192 +2265,153 @@ section,
 }
 
 /*--------------------------------------------------------------
+# whyWorkWithUs Section
+--------------------------------------------------------------*/
+.whyshop-bg {
+  background: #f9fafb;
+  padding: 4rem 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.whyshop-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.whyshop-features {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .whyshop-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .whyshop-features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.whyshop-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.whyshop-card:hover {
+  transform: scale(1.05);
+}
+
+.whyshop-icon img {
+  margin: 0 auto;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1rem;
+
+}
+
+.whyshop-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e84d26;
+  margin-bottom: 0.5rem;
+}
+
+.whyshop-card-desc {
+  color: #555;
+  font-size: 1rem;
+}
+
+/*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .faq-tabs .nav-pills {
-  display: inline-flex;
-  padding: 8px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  border-radius: 50px;
-}
-
-.faq .faq-tabs .nav-pills .nav-item {
-  margin: 0 5px;
-}
-
-.faq .faq-tabs .nav-pills .nav-item:first-child {
-  margin-left: 0;
-}
-
-.faq .faq-tabs .nav-pills .nav-item:last-child {
-  margin-right: 0;
-}
-
-.faq .faq-tabs .nav-pills .nav-link {
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: 500;
-  color: var(--default-color);
-  transition: all 0.3s ease;
-}
-
-.faq .faq-tabs .nav-pills .nav-link:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-tabs .nav-pills .nav-link.active {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.faq .faq-tabs .nav-pills .nav-link i {
-  font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
-  .faq .faq-tabs .nav-pills {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .faq .faq-tabs .nav-pills .nav-item {
-    margin: 5px;
-  }
-}
-
-.faq .faq-list .faq-item {
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: var(--surface-color);
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.faq .faq-list .faq-item:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.faq .faq-list .faq-item h3 {
+.faq-main {
   display: flex;
-  align-items: center;
-  padding: 20px 25px;
-  margin: 0;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .faq-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+  transition: box-shadow 0.2s, border-radius 0.2s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.faq-question {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
   font-size: 1.1rem;
   font-weight: 600;
+  color: #333;
   cursor: pointer;
-  background-color: var(--surface-color);
-  transition: all 0.3s ease;
-  position: relative;
+  outline: none;
+  transition: color 0.2s;
+  padding: 2px;
+
 }
 
-.faq .faq-list .faq-item h3:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-}
-
-.faq .faq-list .faq-item h3 .num {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-right: 15px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
-  color: var(--accent-color);
-  border-radius: 50%;
-  font-size: 0.9rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.faq .faq-list .faq-item h3 .question {
-  flex: 1;
-}
-
-.faq .faq-list .faq-item h3 .faq-toggle {
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-left: 15px;
-}
-
-.faq .faq-list .faq-item .faq-content {
-  padding: 15px;
-  display: none;
-}
-
-.faq .faq-list .faq-item .faq-content p {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-
-.faq .faq-list .faq-item .faq-content p:last-child {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-list .faq-item.faq-active h3 {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-}
-
-.faq .faq-list .faq-item.faq-active h3 .faq-toggle {
-  transform: rotate(45deg);
-  color: var(--accent-color);
-}
-
-.faq .faq-list .faq-item.faq-active .faq-content {
-  display: block;
-}
-
-.faq .faq-cta {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.faq .faq-cta p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.faq .faq-cta .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.faq .faq-cta .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), #000 15%);
-  border-color: color-mix(in srgb, var(--accent-color), #000 15%);
+.faq-question:hover {
+  color: #e84d26;
   transform: translateY(-2px);
 }
 
-@media (max-width: 576px) {
-  .faq .faq-list .faq-item h3 {
-    padding: 15px 20px;
-    font-size: 1rem;
-  }
+.faq-answer {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-  .faq .faq-list .faq-item h3 .num {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    font-size: 0.8rem;
-  }
+.faq-video {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
 
-  .faq .faq-list .faq-item .faq-content .content-inner {
-    padding: 0 20px;
-  }
+.faq-video iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: none;
 
-  .faq .faq-list .faq-item .faq-content.faq-active .content-inner {
-    padding: 15px 20px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2599,7 +2756,6 @@ section,
   max-width: 1200px;
 }
 
-
 .contact-card {
   display: flex;
   flex-direction: row;
@@ -2667,7 +2823,7 @@ section,
   flex: 1 1 120px;
   padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-right: 8px;
   font-size: 1rem;
   min-width: 0;
@@ -3218,3 +3374,446 @@ input[type="email"]:focus {
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+#AdminLogin Section Section
+--------------------------------------------------------------*/
+.admin-login-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.admin-login-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.admin-login-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.admin-login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.admin-login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.admin-login-form input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #e63946;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+/*--------------------------------------------------------------
+#Login Section Section
+--------------------------------------------------------------*/
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+}
+
+
+.login-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.2rem;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.login-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 0.9rem 0.8rem 2.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  padding-left: 2.5rem;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  background: #fff;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0056d2;
+}
+
+.link-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.link-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+.status-msg {
+  color: #d9534f;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.social-icons i {
+  color: #007bff;
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+
+
+/*--------------------------------------------------------------
+#responsive
+--------------------------------------------------------------*/
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem 1.5rem;
+    max-width: 95%;
+  }
+
+  .login-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-container p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-group input {
+    padding: 0.7rem 0.8rem 0.7rem 2.2rem;
+    font-size: 0.9rem;
+  }
+
+  .input-icon {
+    font-size: 0.9rem;
+    left: 0.7rem;
+  }
+
+  .login-btn {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .link-text {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icons i {
+    font-size: 1.1rem;
+  }
+}
+
+
+/*--------------------------------------------------------------
+#sinup Section Section
+--------------------------------------------------------------*/
+
+
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.signup-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.signup-card h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.google-btn {
+  background: white;
+  color: #333;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn img {
+  width: 20px;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #777;
+}
+
+.email-toggle-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-toggle-btn:hover {
+  background: #0056b3;
+}
+
+.email-form {
+  margin-top: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.signup-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: #218838;
+}
+
+.signup-status {
+  background: #e9f7fd;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+#Responsive
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .signup-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .google-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .google-btn img {
+    width: 18px;
+  }
+
+  .divider {
+    margin: 15px 0;
+    font-size: 0.9rem;
+  }
+
+  .email-toggle-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .signup-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .signup-status {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .login-link {
+    margin-top: 15px;
+    font-size: 0.85rem;
+  }
+}
+

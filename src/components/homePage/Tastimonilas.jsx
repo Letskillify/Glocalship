@@ -2,7 +2,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const testimonials = [
+
+
+const Tastimonilas = [
     {
       id: 1,
       name: 'James Wilson',
@@ -80,7 +82,7 @@ const Testimo = () => {
       <div className="section-underline"></div>
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
-          {testimonials.map((testimonial) => (
+          {Tastimonilas.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-slide">
               <div className="testimonial-card">
                 <div className="testimonial-image">

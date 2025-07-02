@@ -47,7 +47,6 @@ function Header() {
   return (
     <header
       className={`custom-header shadow-sm ${showHeader ? 'show' : 'hide'}`}
-      style={{ backgroundColor: 'var(--primary)' }}
     >
       <nav className="container navbar navbar-expand-md navbar-light container-fluid px-2">
         <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -55,6 +54,7 @@ function Header() {
             Glocalship
           </h5>
         </Link>
+
 
         <button
           className="navbar-toggler"
@@ -64,11 +64,16 @@ function Header() {
           aria-expanded={!isNavCollapsed}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          {isNavCollapsed ? (
+            <span className="navbar-toggler-icon"></span>
+          ) : (
+            <i className="fa-solid fa-xmark fs-2 text-white"></i>
+          )}
         </button>
 
+
         <div
-          className={` toggleCollapse collapse navbar-collapse ${!isNavCollapsed ? 'show' : ''
+          className={` toggleCollapse navbar-collapse ${!isNavCollapsed ? 'show' : ''
             }`}
           id="navbarNav"
         >
@@ -87,6 +92,9 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="">Track Parcel</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="">Contect</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="">

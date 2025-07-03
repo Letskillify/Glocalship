@@ -1,114 +1,189 @@
-import React from 'react';
+import { FaLightbulb, FaChartLine, FaShieldAlt, FaUsers } from "react-icons/fa";
 
-function About() {
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "Georgio Wilou",
+    role: "Manager",
+    image: "/public/images/about-slider-1.jpg",
+    gradient: "linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))",
+  },
+  {
+    id: 2,
+    name: "Elizabeth Sherr",
+    role: "Pr director",
+    image: "/public/images/about-slider-2.jpg",
+    gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+  },
+  {
+    id: 3,
+    name: "Julia String",
+    role: "Coordinator",
+    image: "/public/images/about-slider-3.jpg",
+    gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+  },
+  {
+    id: 4,
+    name: "Julia String",
+    role: "Coordinator",
+    image: "/public/images/about-slider-4.jpg",
+    gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+  },
+];
+
+const values = [
+  {
+    icon: <FaLightbulb />,
+    title: "Innovation",
+    desc: "Delivering forward-thinking solutions that challenge norms and unlock new opportunities.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Growth",
+    desc: "Driving smart, scalable expansion through data-driven logistics and planning.",
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: "Integrity",
+    desc: "Committed to transparency, accountability, and ethical service in every shipment.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Collaboration",
+    desc: "Building strong partnerships with clients to create long-term, shared success.",
+  },
+];
+const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // animation only once
+    });
+  }, []);
+
+
   return (
-     <div>
-      <section id="about" className="about section">
-        <div className="container" data-aos="fade-up">
-          <div className="row justify-content-center mb-5">
-            <div className="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
-              <h2 className="section-heading">Our Vision &amp; Mission</h2>
-              <p className="lead">
-                We're dedicated to transforming businesses through innovative solutions and strategic expertise that drive sustainable growth.
-              </p>
-            </div>
+    <div className="about-body">
+      {/* Hero Section */}
+      <section className="hero-about-us-section">
+        <div className="hero-about-inside">
+          <h1 className="hero-about-head">ABOUT US</h1>
+        </div>
+      </section>
+
+      <section className="our-info" data-aos="fade-up">
+        <div className="img-container position-relative">
+          <img
+            src="/images/about-1.jpg"
+            alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
+            className="img-our-info"
+          />
+        </div>
+        <div style={{ flex: "1 1 350px", maxWidth: "600px" }}>
+          <h2 className="our-corpo-head">ABOUT OUR CORPORATION</h2>
+          <p className="our-info-para">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor nostrud
+            exercitation ullamco.
+          </p>
+          <p className="our-info-para">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+        </div>
+      </section>
+
+      {/* service sec */}
+      <section className="vision-mission-section py-5">
+        <div className="container text-center">
+          <h1 className="section-title head-about">Our Vision & Mission</h1>
+          <p className="section-subtitle mb-5">
+            We're focused on reshaping delivery experiences through smart
+            logistics, ethical values, and strong partnerships.
+          </p>
+
+          {/* First Row */}
+          <div className="row justify-content-center">
+            {values.slice(0, 2).map((item, index) => (
+              <div className="col-md-6 mb-4" key={index} data-aos="fade-up">
+                <div className="vision-mission-card">
+                  <div className="icon-circle mx-auto mb-3">{item.icon}</div>
+                  <h5 className="fw-bold vision-card-title">{item.title}</h5>
+                  <p className="vision-desc">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="row g-4 mb-5">
-            <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div className="feature-box">
-                <div className="icon-container">
-                  <i className="bi bi-lightbulb"></i>
-                </div>
-                <h4>Innovation</h4>
-                <p>Pioneering solutions that challenge conventional thinking and create new opportunities for success.</p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-              <div className="feature-box">
-                <div className="icon-container">
-                  <i className="bi bi-graph-up-arrow"></i>
-                </div>
-                <h4>Growth</h4>
-                <p>Facilitating sustainable expansion through strategic planning and calculated execution.</p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <div className="feature-box">
-                <div className="icon-container">
-                  <i className="bi bi-shield-check"></i>
-                </div>
-                <h4>Integrity</h4>
-                <p>Upholding the highest standards of ethics, transparency and accountability in all our endeavors.</p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-              <div className="feature-box">
-                <div className="icon-container">
-                  <i className="bi bi-people-fill"></i>
-                </div>
-                <h4>Collaboration</h4>
-                <p>Working alongside our clients as partners to achieve mutual growth and shared success.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row align-items-center about-showcase">
-            <div className="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="300">
-              <div className="about-image-grid">
-                <img src="assets/img/about/about-15.webp" className="img-grid-main" alt="Our company vision" />
-                <img src="assets/img/about/about-17.webp" className="img-grid-secondary" alt="Our team" />
-                <img src="assets/img/about/about-square-5.webp" className="img-grid-tertiary" alt="Our workspace" />
-                <div className="experience-badge" data-aos="zoom-in" data-aos-delay="500">
-                  <span className="years">15+</span>
-                  <span className="text">Years of Excellence</span>
+          {/* Second Row */}
+          <div className="row justify-content-center">
+            {values.slice(2, 4).map((item, index) => (
+              <div className="col-md-6 mb-4" key={index + 2}>
+                <div className="vision-mission-card">
+                  <div className="icon-circle mx-auto mb-3">{item.icon}</div>
+                  <h5 className="fw-bold vision-card-title">{item.title}</h5>
+                  <p className="vision-desc">{item.desc}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="200">
-              <div className="about-content-box">
-                <h3>Transforming Businesses Since 2008</h3>
-                <p className="mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida tortor in lectus pharetra, at iaculis orci scelerisque. Cras porta enim id neque interdum, at fermentum odio venenatis.
-                </p>
-
-                {[
-                  { label: 'Strategic Planning', percent: 94 },
-                  { label: 'Business Development', percent: 87 },
-                  { label: 'Market Research', percent: 92 },
-                ].map((item, idx) => (
-                  <div className="progress-item" key={item.label} data-aos="fade-up" data-aos-delay={300 + idx * 100}>
-                    <div className="d-flex justify-content-between">
-                      <span className="progress-title">{item.label}</span>
-                      <span className="progress-percent">{item.percent}%</span>
-                    </div>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: `${item.percent}%` }}
-                        aria-valuenow={item.percent}
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-
-                <a href="about.html" className="btn btn-discover mt-4" data-aos="fade-up" data-aos-delay="600">
-                  Learn More About Us
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+<section className="cta-section text-center py-5" data-aos="fade-up">
+  <div className="container">
+    <div className="cta-content-wrapper">
+      <h1 className="cta-heading">Let’s Deliver Smarter Together</h1>
+      <p className="cta-subtext">
+        Join us in transforming the future of parcel delivery. We’re ready when you are.
+      </p>
+      <a href="/contact" className="button">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+      {/* our team */}
+      <section className="team-section" aria-label="Meet Our Team">
+        <h1 className="head-about team-head " data-aos="fade-down">
+          Meet Our Team
+        </h1>
+        <div className="cards-container">
+          
+            {teamMembers.map(({ id, name, role, image }) => (
+              <div key={id} className="meet-team-card">
+                <div key={id} className="parent-card">
+                  <div className="image-wrapper">
+                    <img src={image} alt={role} />
+                    <div className="info-bar overlay">
+                      <span className="name">{name}</span>
+                      <span className="role overlay-title">{role}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          
+        </div>
+      </section>
+
+
+
+
     </div>
   );
-}
+};
 
 export default About;

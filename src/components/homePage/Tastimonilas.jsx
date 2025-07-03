@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 
 
-const Testimonials = [
+const Tastimonilas = [
     {
       id: 1,
       name: 'James Wilson',
@@ -33,30 +33,29 @@ const Testimonials = [
       id: 4,
       name: 'Lisa Choky',
       role: 'Online Seller',
-      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      content: 'Great service and timely deliveries. Will use again!',
       rating: 5,
-      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+      image: 'https://placehold.co/100x100?text=Lisa+C&font=roboto'
     },
     {
       id: 5,
       name: 'Chin Yuon',
       role: 'Online Seller',
-      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      content: 'Fantastic experience! The support team was very helpful.',
       rating: 5,
-      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+      image: 'https://placehold.co/100x100?text=Chin+Y&font=roboto'
     },
     {
       id: 6,
       name: 'Advert Johnson',
       role: 'Online Seller',
-      content: 'Excellent tracking system and friendly customer support. Highly recommend!',
+      content: 'Quick and reliable service. Highly satisfied!',
       rating: 5,
-      image: 'https://placehold.co/100x100?text=David+K&font=roboto'
+      image: 'https://placehold.co/100x100?text=Advert+J&font=roboto'
     },
-  ];
+];
 
 const Testimo = () => {
-
    const settings = {
     dots: false,
     infinite: true,
@@ -78,13 +77,12 @@ const Testimo = () => {
   };
 
   return (
-
        <div className="testimonial-container">
       <h1 className="section-title">Testimonials</h1>
       <div className="section-underline"></div>
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
-          {Testimonials.map((testimonial) => (
+          {Tastimonilas.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-slide">
               <div className="testimonial-card">
                 <div className="testimonial-image">
@@ -105,11 +103,10 @@ const Testimo = () => {
               </div>
             </div>
           ))}
-          </Slider>
-
+        </Slider>
       </div>
     </div>
-  )
+  );
 }
 
 export default Testimo;

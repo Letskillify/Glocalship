@@ -1,5 +1,4 @@
 import { FaLightbulb, FaChartLine, FaShieldAlt, FaUsers } from "react-icons/fa";
-import '../../assets/css/about.css';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,28 +9,28 @@ const teamMembers = [
     id: 1,
     name: "Georgio Wilou",
     role: "Manager",
-    image: "/public/images/about-slider-1.jpg",
+    image: "/public/assests/img/about-slider-1.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))",
   },
   {
     id: 2,
     name: "Elizabeth Sherr",
     role: "Pr director",
-    image: "/public/images/about-slider-2.jpg",
+    image: "/public/assests/img/about-slider-2.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 3,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/images/about-slider-3.jpg",
+    image: "/public/assests/img/about-slider-3.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 4,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/images/about-slider-4.jpg",
+    image: "/public/assests/img/about-slider-4.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
 ];
@@ -79,7 +78,7 @@ const About = () => {
       <section className="our-info" data-aos="fade-up">
         <div className="img-container position-relative">
           <img
-            src="/images/about-1.jpg"
+            src="/public/assests/img/about-1.jpg"
             alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
             className="img-our-info"
           />
@@ -177,8 +176,6 @@ const About = () => {
           
         </div>
       </section>
-
-
 
 
     </div>

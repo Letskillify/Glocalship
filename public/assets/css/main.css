@@ -1030,7 +1030,7 @@ section,
 /* hero section  */
 
 .hero-about-us-section {
-  background: url('/images/about-us-ship.jpg') center center / cover no-repeat;
+  background: url('/public/assests/img/about-us-ship.jpg') center center / cover no-repeat;
   min-height: 400px;
   display: flex;
   align-items: center;
@@ -1152,9 +1152,9 @@ section,
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  width: 220px;          /* adjust based on your SVG image */
+  width: 220px;      
   height: 50px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="%23404" d="M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z"></path></svg>'); /* 👈 use PNG path */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="%23404" d="M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z"></path></svg>'); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1229,8 +1229,6 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-
 
 /* about us team sec */
 

@@ -1,4 +1,5 @@
 import { FaLightbulb, FaChartLine, FaShieldAlt, FaUsers } from "react-icons/fa";
+import '../../assets/css/about.css';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -152,8 +153,6 @@ const About = () => {
     </div>
   </div>
 </section>
-
-
 
       {/* our team */}
       <section className="team-section" aria-label="Meet Our Team">

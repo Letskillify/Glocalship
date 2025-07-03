@@ -9,28 +9,28 @@ const teamMembers = [
     id: 1,
     name: "Georgio Wilou",
     role: "Manager",
-    image: "/public/assests/img/about-slider-1.jpg",
+    image: "/assests/img/about-slider-1.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))",
   },
   {
     id: 2,
     name: "Elizabeth Sherr",
     role: "Pr director",
-    image: "/public/assests/img/about-slider-2.jpg",
+    image: "/assests/img/about-slider-2.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 3,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/assests/img/about-slider-3.jpg",
+    image: "/assests/img/about-slider-3.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 4,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/assests/img/about-slider-4.jpg",
+    image: "/assests/img/about-slider-4.jpg",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
 ];
@@ -78,7 +78,7 @@ const About = () => {
       <section className="our-info" data-aos="fade-up">
         <div className="img-container position-relative">
           <img
-            src="/public/assests/img/about-1.jpg"
+            src="/assests/img/about-1.jpg"
             alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
             className="img-our-info"
           />

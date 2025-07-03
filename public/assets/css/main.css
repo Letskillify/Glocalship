@@ -1027,338 +1027,283 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .section-heading {
-  font-size: 2.5rem;
-  color: var(--heading-color);
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 1rem;
-  font-weight: 700;
-}
+/* hero section  */
 
-.about .section-heading:after {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 3px;
-  background: var(--accent-color);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about .lead {
-  font-size: 1.2rem;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about .feature-box {
-  background: var(--surface-color);
-  border-radius: 12px;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  height: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.about .feature-box:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  z-index: -1;
-  transition: height 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-  border-radius: 12px;
-}
-
-.about .feature-box:hover {
-  transform: translateY(-10px);
-  box-shadow: none;
-}
-
-.about .feature-box:hover:before {
-  height: 100%;
-}
-
-.about .feature-box:hover .icon-container {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .feature-box .icon-container {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+.hero-about-us-section {
+  background: url('/images/about-us-ship.jpg') center center / cover no-repeat;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
-  font-size: 1.8rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 85%);
-}
-
-.about .feature-box h4 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--heading-color);
-}
-
-.about .feature-box p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.about .about-content-box {
-  padding: 2rem;
-}
-
-.about .about-content-box h3 {
-  font-size: 2rem;
-  color: var(--heading-color);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.about .about-content-box p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-}
-
-.about .about-content-box .progress-item {
-  margin-bottom: 1.2rem;
-}
-
-.about .about-content-box .progress-item .progress-title {
-  font-weight: 600;
-  color: var(--heading-color);
-  font-size: 1rem;
-}
-
-.about .about-content-box .progress-item .progress-percent {
-  font-weight: 700;
-  color: var(--accent-color);
-}
-
-.about .about-content-box .progress-item .progress {
-  height: 8px;
-  border-radius: 4px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  margin-top: 0.5rem;
-  overflow: hidden;
-}
-
-.about .about-content-box .progress-item .progress .progress-bar {
-  background-color: var(--accent-color);
-  border-radius: 4px;
-}
-
-.about .about-content-box .btn-discover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: none;
-  border-radius: 30px;
-  padding: 0.8rem 2rem;
-  font-weight: 600;
-  transition: all 0.3s;
   position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
   overflow: hidden;
-  z-index: 1;
 }
 
-.about .about-content-box .btn-discover:before {
+.hero-about-us-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: color-mix(in srgb, var(--accent-color), #000 15%);
-  transition: width 0.3s ease;
-  z-index: -1;
-  border-radius: 30px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for better text visibility */
+  z-index: 0;
 }
 
-.about .about-content-box .btn-discover:hover {
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 80%);
-}
-
-.about .about-content-box .btn-discover:hover:before {
-  width: 100%;
-}
-
-.about .about-image-grid {
+.hero-about-inside {
   position: relative;
-  height: 540px;
-  margin: 0 2rem;
-}
-
-.about .about-image-grid .img-grid-main {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
-.about .about-image-grid .img-grid-secondary {
-  position: absolute;
-  bottom: 0;
-  right: 30%;
-  width: 50%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+.hero-about-head {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.about .about-image-grid .img-grid-tertiary {
-  position: absolute;
-  left: 0;
-  bottom: 70px;
-  width: 40%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  z-index: 3;
+
+/* our infor */
+
+.our-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
-.about .about-image-grid .experience-badge {
-  position: absolute;
-  right: 10px;
-  bottom: 30px;
-  width: 120px;
-  height: 120px;
-  background: var(--accent-color);
-  border-radius: 50%;
+.img-container {
+  flex: 1 1 400px;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.img-our-info {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.img-our-info:hover {
+  transform: scale(1.03);
+}
+
+.our-corpo-head {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FF3346;
+  margin-bottom: 20px;
+}
+
+.our-info-para {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* our vision and mission */
+
+.vision-mission-card{
+  width: 100%;
+  height: 300px !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: var(--contrast-color);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  z-index: 4;
+  align-items: center;
+  padding: 30px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #003953 0%, #5e2b82 100%);
+  transition: 0.3s ease;
 }
 
-.about .about-image-grid .experience-badge .years {
+.vision-mission-card:hover{
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+
+}
+
+.section-subtitle{
+  font-size: 1.3rem !important;
+  color: black !important;
+}
+
+.head-about {
+    position: relative;
+  display: inline-block; /* so ::after stays with heading width */
+  margin-bottom: 4rem;   /* space below SVG */
+  padding-bottom: 3rem
+}
+
+.head-about::after {
+  content: "";
+    position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;          /* adjust based on your SVG image */
+  height: 50px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="%23404" d="M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z"></path></svg>'); /* 👈 use PNG path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+
+.vision-card-title{
   font-size: 2.5rem;
   font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.2rem;
+  line-height: 1.3;
+  color: #ffffff !important;
 }
 
-.about .about-image-grid .experience-badge .text {
-  font-size: 0.8rem;
+.vision-desc{
+  font-size: 1rem !important;
+  color: white !important;
+}
+
+.icon-circle {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:0.5s ease;
+}
+
+.vision-mission-card:hover .icon-circle{
+  background-color: #FF3346;
+  
+}
+
+
+/* about cta sec */
+
+a {
+  text-decoration:none !important;
+}
+.cta-section {
+  background: linear-gradient(135deg, #f09f33, #f7c471);
+  color: #1a1a1a;
+  border-radius: 12px;
+  margin: 60px 20px;
+}
+
+.cta-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.cta-subtext {
+  font-size: 1.5rem !important;
+  margin-top: 10px;
+  color: #ffffff !important;
+}
+
+.cta-section .button {
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  color:white;
+  background: black;
+  padding: 8px;
+}
+
+.cta-section .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* about us team sec */
+
+.team-section {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e8f0ff);
   text-align: center;
-  max-width: 90px;
-  line-height: 1.2;
 }
 
-@media (max-width: 1199px) {
-  .about .about-image-grid {
-    height: 480px;
-  }
-
-  .about .about-image-grid .img-grid-main {
-    height: 300px;
-  }
-
-  .about .about-image-grid .img-grid-secondary {
-    height: 200px;
-  }
-
-  .about .about-image-grid .img-grid-tertiary {
-    height: 220px;
-  }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 991px) {
-  .about .section-heading {
-    font-size: 2.2rem;
-  }
-
-  .about .about-content-box {
-    padding: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .about .about-content-box h3 {
-    font-size: 1.8rem;
-  }
-
-  .about .about-image-grid {
-    height: 450px;
-    margin: 0 auto;
-    max-width: 500px;
-  }
-
-  .about .about-image-grid .experience-badge {
-    width: 100px;
-    height: 100px;
-  }
-
-  .about .about-image-grid .experience-badge .years {
-    font-size: 2rem;
-  }
+.meet-team-card {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 767px) {
-  .about .section-heading {
-    font-size: 1.8rem;
-  }
+.meet-team-card:hover {
+  transform: translateY(-10px);
+}
 
-  .about .feature-box {
-    padding: 1.8rem 1rem;
-  }
+.parent-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
 
-  .about .feature-box .icon-container {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
+.image-wrapper {
+  position: relative;
+  height: auto;
+}
 
-  .about .about-image-grid {
-    height: 400px;
-    margin-bottom: 2rem;
-  }
+.image-wrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
-  .about .about-image-grid .img-grid-main {
-    width: 75%;
-    height: 250px;
-  }
+.meet-team-card:hover img {
+  transform: scale(1.1);
+}
 
-  .about .about-image-grid .img-grid-secondary {
-    width: 55%;
-    height: 180px;
-  }
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+  color: white;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  transition: transform 0.4s ease;
+  transform: translateY(0);
+}
 
-  .about .about-image-grid .img-grid-tertiary {
-    width: 40%;
-    height: 180px;
-  }
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1rem;
+  color: #e0e0e0;
+  display: block;
+  margin-top: 4px;
 }
 
 /*--------------------------------------------------------------

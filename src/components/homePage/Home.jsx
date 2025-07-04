@@ -4,7 +4,7 @@ import About from './About'
 import Stats from './Stats'
 import ServiceSection from './ServiceSection'
 import Clients from './Clients'
-import Tastimonilas from './Tastimonilas'
+import Testimonials from './Testimonials'
 import WorkSection from './WorkSection'
 import WhyShopWithUs from './WhyShopWithUs'
 import FaqSection from './FaqSection'
@@ -26,7 +26,7 @@ function Home() {
       <Stats />
       <ServiceSection />
       <Clients />
-      <Tastimonilas />
+      <Testimonials />
       <WorkSection />
       <WhyShopWithUs />
       <FaqSection />

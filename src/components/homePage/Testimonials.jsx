@@ -65,7 +65,7 @@ const Testimo = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    pauseOnHover: true,
+    pauseOnHover:false,
     responsive: [
       {
         breakpoint: 768,

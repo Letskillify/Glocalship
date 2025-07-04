@@ -1775,7 +1775,7 @@ a{
   font-weight: bold;
 }
 
-.section-underline {
+.section-underline::after {
   width: 5%;
   height: 3px;
   background-color: #f85d23;

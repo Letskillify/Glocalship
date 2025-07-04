@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from './HeroSection'
-// import About from './About'
+import About from './About'
 import Stats from './Stats'
 import ServiceSection from './ServiceSection'
 import Clients from './Clients'
@@ -22,7 +22,7 @@ function Home() {
       {/* <Login/>   */}
       {/* <Signup/> */}
       <Banner />
-      {/* <About /> */}
+      <About />
       <Stats />
       <ServiceSection />
       <Clients />

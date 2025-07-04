@@ -1027,7 +1027,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-
+a{
+  text-decoration: none;
+}
 /* Home about section  */
 .our-info {
   display: flex;
@@ -1061,7 +1063,7 @@ section,
 }
 
 .our-corpo-head {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #f85d23;
   margin-bottom: 20px;

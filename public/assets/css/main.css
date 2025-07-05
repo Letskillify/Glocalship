@@ -659,7 +659,7 @@ h6 {
 
 .footer p {
   color: #d1d5db;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -677,7 +677,7 @@ h6 {
 .ul-menu .list {
   color: #9ca3af;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -687,7 +687,7 @@ h6 {
 
 .social-links a {
   color: #9ca3af;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 

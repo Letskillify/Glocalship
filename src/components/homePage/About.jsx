@@ -5,7 +5,7 @@ function About() {
       <section className="our-info" data-aos="fade-up">
         <div className="img-container position-relative" >
           <img
-            src="/public/assets/img/about/about-1.jpg"
+            src="/public/assets/img/about/about-home-1.png"
             alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
             className="img-our-info"
           />

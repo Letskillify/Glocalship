@@ -58,6 +58,7 @@ function ServiceSection() {
   return (
      <div className="slider-section">
       <h2 className="slider-heading">Our Services</h2>
+      <div className="slider-head-svg"></div>
       <div className="slider-wrapper">
         <Slider {...settings}>
           {data.map((item, index) => (

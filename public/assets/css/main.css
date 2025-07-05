@@ -1027,9 +1027,244 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
 a{
   text-decoration: none !important;
 }
+
+
+.hero-about-us-section {
+  background: url('/images/about-us-ship.jpg') center center / cover no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-about-us-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for better text visibility */
+  z-index: 0;
+}
+
+.hero-about-inside {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-about-head {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
+.vision-mission-card{
+  width: 100%;
+  height: 300px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #432371 0%, #f85d23 100%);
+  transition: 0.3s ease;
+}
+
+.vision-mission-card:hover{
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+
+}
+
+.section-subtitle{
+  font-size: 1.3rem !important;
+  color: black !important;
+}
+
+.head-about {
+  position: relative;
+  display: inline-block; 
+  margin-bottom: 4rem;  
+  padding-bottom: 3rem
+}
+
+.head-about::after {
+  content: "";
+    position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;    
+  height: 50px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="%23404" d="M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z"></path></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+
+.vision-card-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff !important;
+}
+
+.vision-desc{
+  font-size: 1rem !important;
+  color: white !important;
+}
+
+.icon-circle {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:0.5s ease;
+}
+
+.vision-mission-card:hover .icon-circle{
+  color: #e94e36 !important;
+  background-color: #000;
+}
+
+/* about cta sec */
+
+a {
+  text-decoration:none !important;
+}
+.cta-section {
+  background: linear-gradient(135deg, #f85d23, #ffb347);
+  color: #1a1a1a;
+  border-radius: 12px;
+  margin: 60px 20px;
+}
+
+.cta-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.cta-subtext {
+  font-size: 1.5rem !important;
+  margin-top: 10px;
+  color: #ffffff !important;
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f85d23;
+  background-color: #fff;
+  border: 2px solid #f85d23;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-more-button:hover {
+  box-shadow: 0 8px 20px rgba(248, 93, 35, 0.3);
+  text-decoration: none;
+}
+
+/* about us team sec */
+
+.team-section {
+  padding: 80px 20px;
+  background:  linear-gradient(to right, #fffaf7, #ffe6d6);
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meet-team-card {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.meet-team-card:hover {
+  transform: translateY(-10px);
+}
+
+.parent-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-wrapper {
+  position: relative;
+  height: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.meet-team-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background:linear-gradient(to top, rgba(248,93,35,0.85), rgba(248,93,35,0.2));
+  color: white;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  transition: transform 0.4s ease;
+  transform: translateY(0);
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #ffffff !important;
+  display: block;
+  margin-top: 4px;
+}
+
+
 /* Home about section  */
 .our-info {
   display: flex;
@@ -1070,7 +1305,7 @@ a{
 }
 
 .our-info-para {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.7;
   color:  #444444 !important;
   margin-bottom: 16px;
@@ -1249,11 +1484,21 @@ a{
 
 .slider-heading {
   font-size: 2.5rem;
-  font-weight: 700;
   color: #1f2937;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.slider-head-svg {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  margin: -25px auto 0 auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath fill='%23404' d='M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .slider-wrapper {
@@ -1770,18 +2015,22 @@ a{
 .section-title {
   text-align: center;
   color: #2c3e50;
-  font-size: 3rem;
-  margin-bottom: 1.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
-.section-underline::after {
-  width: 5%;
-  height: 3px;
-  background-color: #f85d23;
-  margin: 0 auto;
-  border-radius: 2px;
+
+.section-svg {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  margin: -72px auto 0 auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath fill='%23404' d='M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
 
 .testimonial-card {
   max-width: 800px;
@@ -2708,6 +2957,14 @@ input[type="email"]:focus {
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
+
+
+
+
+
+
+
+
 .service-details .swiper-wrapper {
   height: auto !important;
 }

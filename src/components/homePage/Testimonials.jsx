@@ -78,8 +78,10 @@ const Testimo = () => {
 
   return (
        <div className="testimonial-container">
-      <h1 className="section-title">Testimonials</h1>
-      <div className="section-underline"></div>
+      <div className="top-testimo">
+        <h1 className="section-title">Testimonials</h1>
+      <div className="section-svg"></div>
+      </div>
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
           {Tastimonilas.map((testimonial) => (

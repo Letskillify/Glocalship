@@ -1293,9 +1293,6 @@ a {
   transition: transform 0.4s ease;
 }
 
-.img-our-info:hover {
-  transform: scale(1.03);
-}
 
 .our-corpo-head {
   font-size: 2rem;

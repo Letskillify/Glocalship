@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -6,79 +7,55 @@ export default function FaqSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqData = [
+    { question: "What Is online?", answer: "A platform that helps people shop from India and ship worldwide." },
+    { question: "Do I Get A Locker In India To Store My Purchases?", answer: "Yes, we provide a secure locker system in India to hold your purchases before shipping." },
+    { question: "Can You Manage My Online Orders In India?", answer: "Yes, we can manage and track your online orders placed within India." },
+    { question: "Can You Pickup Package From My Home In India?", answer: "Yes, we offer home pickup services in select Indian cities." },
+    { question: "Can You Shop On My Behalf In India?", answer: "Absolutely! We can shop for you from Indian stores as per your request." }
+  ];
+
   return (
-    <section><div className="container section-title" data-aos="fade-up">
+    <section className="py-5">
+      <div className="container section-title text-center mb-4" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div>
-    <div className="faq-main">
-      <div className="faq-list">
-        <div className="faq-item">
-          <button className="faq-question" onClick={() => toggleAnswer(0)}>
-           1. What Is online?
-          </button>
-          {openIndex === 0 && (
-            <div className="faq-answer">
-               a platform that helps people shop from India and ship worldwide.
+
+      <div className="container">
+        <div className="row g-4">
+
+          <div className="col-md-6">
+            {faqData.map((item, index) => (
+              <div className="faq-item" key={index}>
+                <p className="faq-question" onClick={() => toggleAnswer(index)}>
+                  <span>{index + 1}. {item.question}</span>
+                  <span className={`faq-arrow ${openIndex === index ? "rotate" : ""}`}>▼</span>
+                </p>
+                <div className={`faq-answer ${openIndex === index ? "show" : ""}`}>
+                  {item.answer}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="col-md-6">
+            <div className="faq-video">
+              <iframe
+                width="100%"
+                height="320"
+                src="https://www.youtube.com/embed/AEp0DE17cQo"
+                title="FAQ Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
-          )}
+          </div>
+
         </div>
-        <div className="faq-item">
-          <button className="faq-question" onClick={() => toggleAnswer(1)}>
-           2. Do I Get A Locker In India To Store My Purchases?
-          </button>
-          {openIndex === 1 && (
-            <div className="faq-answer">
-              Yes, we provide a secure locker system in India to hold your purchases before shipping.
-            </div>
-          )}
-        </div>
-        <div className="faq-item">
-          <button className="faq-question" onClick={() => toggleAnswer(2)}>
-           3. Can You Manage My Online Orders In India?
-          </button>
-          {openIndex === 2 && (
-            <div className="faq-answer">
-              Yes, we can manage and track your online orders placed within India.
-            </div>
-          )}
-        </div>
-        <div className="faq-item">
-          <button className="faq-question" onClick={() => toggleAnswer(3)}>
-           4. Can You Pickup Package From My Home In India?
-          </button>
-          {openIndex === 3 && (
-            <div className="faq-answer">
-              Yes, we offer home pickup services in select Indian cities.
-            </div>
-          )}
-        </div>
-        <div className="faq-item">
-          <button className="faq-question" onClick={() => toggleAnswer(4)}>
-           5. Can You Shop On My Behalf In India?
-          </button>
-          {openIndex === 4 && (
-            <div className="faq-answer">
-              Absolutely! We can shop for you from Indian stores as per your request.
-            </div>
-          )}
-        </div>
-      
       </div>
-      <div className="faq-video">
-        <iframe
-          width="520"
-          height="320"
-          src="https://www.youtube.com/embed/AEp0DE17cQo"
-          title="Back To School Shopping in Alphabetical Order!!"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
     </section>
   );
 }
-

@@ -1,7 +1,5 @@
 import { FaLightbulb, FaChartLine, FaShieldAlt, FaUsers } from "react-icons/fa";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const teamMembers = [
@@ -9,31 +7,32 @@ const teamMembers = [
     id: 1,
     name: "Georgio Wilou",
     role: "Manager",
-    image: "/public/images/about-slider-1.jpg",
+    image: "/assets/img/about/about-slider-1.png", // corrected
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))",
   },
   {
     id: 2,
     name: "Elizabeth Sherr",
     role: "Pr director",
-    image: "/public/images/about-slider-2.jpg",
+    image: "/assets/img/about/about-slider-2.png",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 3,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/images/about-slider-3.jpg",
+    image: "/assets/img/about/about-slider-3.png",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
   {
     id: 4,
     name: "Julia String",
     role: "Coordinator",
-    image: "/public/images/about-slider-4.jpg",
+    image: "/assets/img/about/about-slider-4.png",
     gradient: "linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
   },
 ];
+
 
 const values = [
   {
@@ -67,7 +66,7 @@ const About = () => {
 
 
   return (
-    <div className="about-body">
+    <div className=" container about-body">
       {/* Hero Section */}
       <section className="hero-about-us-section">
         <div className="hero-about-inside">
@@ -76,9 +75,9 @@ const About = () => {
       </section>
 
       <section className="our-info" data-aos="fade-up">
-        <div className="img-container position-relative">
+        <div className="img-container">
           <img
-            src="/images/about-1.jpg"
+            src=" assets/img/about/about-1.png"
             alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
             className="img-our-info"
           />
@@ -139,19 +138,19 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-<section className="cta-section text-center py-5" data-aos="fade-up">
-  <div className="container">
-    <div className="cta-content-wrapper">
-      <h1 className="cta-heading">Let’s Deliver Smarter Together</h1>
-      <p className="cta-subtext">
-        Join us in transforming the future of parcel delivery. We’re ready when you are.
-      </p>
-      <a href="/contact" className="button">
-        Contact Us
-      </a>
-    </div>
-  </div>
-</section>
+      <section className="cta-section text-center py-5" data-aos="fade-up">
+        <div className="container">
+          <div className="cta-content-wrapper">
+            <h1 className="cta-heading">Let’s Deliver Smarter Together</h1>
+            <p className="cta-subtext">
+              Join us in transforming the future of parcel delivery. We’re ready when you are.
+            </p>
+            <a href="/contact" className="button">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -161,21 +160,20 @@ const About = () => {
           Meet Our Team
         </h1>
         <div className="cards-container">
-          
-            {teamMembers.map(({ id, name, role, image }) => (
-              <div key={id} className="meet-team-card">
-                <div key={id} className="parent-card">
-                  <div className="image-wrapper">
-                    <img src={image} alt={role} />
-                    <div className="info-bar overlay">
-                      <span className="name">{name}</span>
-                      <span className="role overlay-title">{role}</span>
-                    </div>
-                  </div>
+
+          {teamMembers.map(({ name, role, image }) => (
+            <div className="meet-team-card">
+              <div className="image-wrapper">
+                <img src={image} alt={role} />
+                <div className="info-bar">
+                  <span className="name">{name}</span>
+                  <br/>
+                  <span className="role">{role}</span>
                 </div>
               </div>
-            ))}
-          
+            </div>
+          ))}
+
         </div>
       </section>
 

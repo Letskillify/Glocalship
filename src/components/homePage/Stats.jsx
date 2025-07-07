@@ -3,7 +3,7 @@ import React from 'react'
 function Stats() {
   return (
     <div>
-       <section id="stats" className="stats section light-background">
+       <section id="stats" className="stats section">
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">
 

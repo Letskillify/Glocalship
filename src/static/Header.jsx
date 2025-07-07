@@ -44,7 +44,7 @@ function Header() {
     <>
       {/* Sub Header */}
       <div className="sub-header py-2 px-3 d-flex justify-content-between align-items-center">
-        <div className="left-links d-flex gap-3">
+        <div className="left-links d-flex gap-3 ms-5">
           <Link to="/" className="sub-link">Support</Link>
           <Link to="/" className="sub-link">Help</Link>
         </div>

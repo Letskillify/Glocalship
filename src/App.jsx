@@ -70,9 +70,13 @@ const AppRoutes = ({ user }) => {
             </PrivateRoute>
           }
         />
-        <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
-        <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
+        
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} /> */}
+        {/* Admin routes */}
+        {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
 

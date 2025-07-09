@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { auth } from '../firebase/firebaseConfig';
 import { signOut } from 'firebase/auth';
 
-function Header() {
+
+const Header=()=> {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [showHeader, setShowHeader] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState("");
   const prevScrollPos = useRef(window.scrollY);
 
   const handleLogout = () => {
@@ -21,39 +22,32 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-
       if (Math.abs(currentScrollPos - prevScrollPos.current) > 10) {
         setShowHeader(currentScrollPos < prevScrollPos.current);
         prevScrollPos.current = currentScrollPos;
       }
-
       setIsScrolled(currentScrollPos > 30);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleChange = (e) => {
-    const val = e.target.value;
-    console.log(val);
-    setSearch(val);
+    setSearch(e.target.value);
   };
 
   return (
     <>
-      {/* Sub Header */}
       <div className="sub-header py-2 px-3 d-flex justify-content-between align-items-center">
         <div className="left-links d-flex gap-3 ms-5">
           <Link to="/" className="sub-link">Support</Link>
           <Link to="/" className="sub-link">Help</Link>
         </div>
         <div className="right-links d-flex gap-3 me-5">
-          <Link to="/login" className="sub-link">Singup</Link>
+          <Link to="/signup" className="sub-link">Sign Up</Link>
         </div>
       </div>
 
-      {/* Main Header */}
       <header className={`custom-header shadow-sm ${showHeader ? 'show' : 'hide'} ${isScrolled ? 'scrolled' : ''}`}>
         <nav className="container navbar navbar-expand-md px-2">
           <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -70,17 +64,11 @@ function Header() {
 
           <div className={`toggleCollapse navbar-collapse ${!isNavCollapsed ? 'show' : ''}`}>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
-              <input
-                className="SearchBar"
-                type="text"
-                placeholder="Search our Product"
-                value={search}
-                onChange={handleChange}
-              />
+              <li><form><input className="SearchBar" type="text" placeholder="Search our Product" value={search} onChange={handleChange} /></form></li>
               <li className="nav-item"><Link className="nav-link" to="">About</Link></li>
               <li className="nav-item"><Link className="nav-link" to="">Services</Link></li>
               <li className="nav-item"><Link className="nav-link" to="">Contact</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="">Track Parcel</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/track">Track Parcel</Link></li>
               <li className="nav-item"><Link className="nav-link" to="">Cart</Link></li>
               <li className="nav-item"><Link className="nav-link" to=""><i className="fa-solid fa-user"></i></Link></li>
             </ul>
@@ -91,4 +79,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header;  

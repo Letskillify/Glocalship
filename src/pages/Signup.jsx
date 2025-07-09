@@ -1,30 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebase/firebaseConfig";
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useNavigate, Link } from "react-router-dom";
-// import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 
 function Signup() {
-  const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState("");
-
   const navigate = useNavigate();
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log("User Logged in:", user);
+      console.log("Google User:", result.user);
       navigate("/");
     } catch (error) {
-      console.log(error);
       setStatus(error.message);
     }
   };
-
 
   const handleEmailSignup = async (e) => {
     e.preventDefault();
@@ -38,55 +32,40 @@ function Signup() {
   };
 
   return (
-    <section className="signup-page">
-      <div className="signup-card">
+    <div className="auth-page">
+      <div className="auth-box">
         <h2>Create Account</h2>
-
-        <button
-          type="button"
-          onClick={handleGoogleLogin}
-          className="google-btn"
-        >
+        <button onClick={handleGoogleLogin} className="google-btn">
           <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google" />
-           Continue with Google
+          Sign up with Google
         </button>
 
-        <div className="divider">or</div>
+        <div className="divider"><span>or</span></div>
 
-        {!showEmailForm && (
-          <button className="email-toggle-btn" onClick={() => setShowEmailForm(true)}>
-            Continue  with Email
-          </button>
-        )}
+        <form onSubmit={handleEmailSignup} className="auth-form">
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Create Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          {status && <p className="status-text">{status}</p>}
+          <button type="submit" className="submit-btn">Create Account</button>
+        </form>
 
-        {showEmailForm && (
-          <form onSubmit={handleEmailSignup} className="email-form">
-            <input
-              type="email"
-              className="form-input"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              className="form-input"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            {status && <div className="signup-status">{status}</div>}
-            <button type="submit" className="signup-btn">Continue</button>
-          </form>
-        )}
-
-        <p className="login-link">
+        <p className="link-text">
           Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
-    </section>
+    </div>
   );
 }
 

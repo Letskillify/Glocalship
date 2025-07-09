@@ -32,8 +32,9 @@
   /* --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Montserrat", sans-serif; */
-  --heading-font: 'Playfair Display', serif;
-  --parimary-font:'Questrial', sans-serif;
+  --heading-font: 'Quicksand', sans-serif;
+  --parimary-font:'Quicksand', sans-serif;
+  --font-size: 2.5rem;
 }
 
 /* src/components/Header.css */
@@ -271,26 +272,25 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-/* Header Styles */
+
 /* Sub Header */
 .sub-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: blue;
+  background-color: #000080;
   color: #fff;
   font-size: 0.9rem;
   padding: 6px 20px;
   z-index: 1030;
 }
-
 .sub-header .sub-link {
   color: #fff;
   text-decoration: none;
+  font-family: var(--heading-font);
   transition: color 0.3s ease;
 }
-
 .sub-header .sub-link:hover {
   color: var(--accent-color);
 }
@@ -306,44 +306,38 @@ h6 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
-
 .custom-header.scrolled {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   background-color: #fff;
+  color: #1a1919;
 }
-
 .custom-header.hide {
   top: -80px;
   opacity: 0;
 }
-
 .custom-header.show {
   top: 36px;
   opacity: 1;
 }
-
 .custom-header .navbar-brand h5 {
   font-size: 1.7rem;
   color: var(--default-color);
   transition: color 0.3s ease;
 }
-
 .custom-header.scrolled .navbar-brand h5 {
   color: #1a1919;
 }
-
 .custom-header .nav-link {
   color: var(--background-color);
+  font-family: var(--heading-font);
   padding: 10px 16px;
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
 }
-
 .custom-header.scrolled .nav-link {
   color: #3b3b3b;
 }
-
 .custom-header .nav-link::after {
   content: '';
   position: absolute;
@@ -355,29 +349,26 @@ h6 {
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
-
 .custom-header .nav-link:hover::after {
   width: 80%;
 }
-
 .custom-header.scrolled .nav-link::after {
   background-color: rgba(177, 140, 140, 0.25);
 }
-
 .SearchBar {
-  border: 2px solid rgb(236, 236, 243);
+  border: 2px solid #ececf3;
   border-radius: 50px;
   padding: 10px 20px;
   outline: none;
   width: 220px;
   transition: all 0.3s ease;
 }
-
 .SearchBar:focus {
   border-color: #0044cc;
   box-shadow: 0 0 5px rgba(0, 68, 204, 0.5);
 }
 
+/* Navbar toggler */
 .navbar-toggler {
   border: none;
   padding: 8px 12px;
@@ -385,38 +376,32 @@ h6 {
   background-color: rgba(255, 255, 255, 0.12);
   transition: all 0.3s ease;
 }
-
 .navbar-toggler:hover {
   background-color: rgba(255, 255, 255, 0.25);
   transform: scale(1.05);
 }
-
 .toggleCollapse {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: all 0.4s ease;
 }
-
 .toggleCollapse.show {
   max-height: 500px;
   opacity: 1;
 }
-
 .toggleCollapse .navbar-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 10px 0;
 }
-
 @media (min-width: 768px) {
   .toggleCollapse {
     max-height: none;
     opacity: 1;
     overflow: visible;
   }
-
   .toggleCollapse .navbar-nav {
     flex-direction: row;
     align-items: center;
@@ -439,7 +424,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
   }
@@ -696,9 +681,9 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
-}
+} */
 
-*/
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -879,7 +864,7 @@ hr {
 --------------------------------------------------------------*/
 .section-titleTwo {
   text-align: center;
-  font-size: 2.5rem;
+  font-size:var(--font-size);
   font-weight: 700;
   color: #222;
   margin-bottom: 1rem;
@@ -958,7 +943,7 @@ hr {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -969,7 +954,7 @@ hr {
 
 @media (min-width: 992px) {
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: var(--font-size);
   }
 }
 
@@ -1102,12 +1087,12 @@ hr {
 --------------------------------------------------------------*/
 
 .hero-about-head {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   font-weight: 800;
   color: #222;
   margin-bottom: 25px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 130px;
   padding: 0px;
   font-family: var(--heading-font);
 }
@@ -1145,7 +1130,7 @@ hr {
 }
 
 .our-corpo-head {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   font-weight: 800;
   color: #222;
   margin-bottom: 25px;
@@ -1177,11 +1162,11 @@ hr {
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: var(--font-size);
+  font-weight: 500;
   color: #222;
   margin-bottom: 20px;
-  font-family: var(--parimary-font);
+ 
 }
 
 .section-subtitle {
@@ -1190,6 +1175,7 @@ hr {
   max-width: 750px;
   margin: 0 auto 50px;
   line-height: 1.7;
+  font-family: var(--parimary-font);
 }
 
 .vision-mission-card {
@@ -1212,7 +1198,7 @@ hr {
   border-radius: 50%;
   background: linear-gradient(135deg, #ff7f50, #ff6600);
   color: #fff;
-  font-size: 2.2rem;
+  font-size: var(--font-size);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1229,7 +1215,7 @@ hr {
   font-weight: 700;
   color: #222;
   margin-bottom: 15px;
-  font-family: var(--parimary-font);
+  font-family: var(--heading-font);
 }
 
 .vision-desc {
@@ -1238,6 +1224,7 @@ hr {
   line-height: 1.7;
   max-width: 420px;
   margin: 0 auto;
+  font-family: var(--parimary-font);
 }
 
 /* CTC section */
@@ -1251,7 +1238,7 @@ hr {
 }
 
 .cta-heading {
-  font-size: 3rem;
+  font-size: var(--font-size);
   font-weight: 800;
   margin-bottom: 20px;
   color: #0b0b0b;
@@ -1299,7 +1286,7 @@ hr {
 }
 
 .team-head {
-  font-size: 3rem;
+  font-size: var(--font-size);
   margin-bottom: 40px;
   color: #222;
   text-align: center;
@@ -1383,7 +1370,7 @@ hr {
 
 @media screen and (max-width: 768px) {
   .cta-heading {
-    font-size: 2.2rem;
+    font-size: var(--font-size);
   }
 
   .cta-subtext {
@@ -1499,7 +1486,7 @@ hr {
 }
 
 .stats .stats-card .stats-content .stats-number .purecounter {
-  font-size: 32px;
+  font-size: var(--font-size);
   font-weight: 700;
   color: var(--heading-color);
   margin: 0;
@@ -1561,7 +1548,7 @@ hr {
 }
 
 .slider-heading {
-  font-size: 2.5rem;
+  font-size:var(--font-size);
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 40px;
@@ -1629,11 +1616,10 @@ hr {
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
-.clients {
+ .clients {
   overflow-x: hidden;
   padding: 40px 0;
-  /* Responsive adjustments */
-}
+ }
 
 .clients .clients-slider {
   position: relative;
@@ -1789,7 +1775,7 @@ hr {
       transform: translateX(0);
     }
   }
-}
+} 
 
 /*--------------------------------------------------------------
 # Banner Section
@@ -1814,7 +1800,7 @@ hr {
 }
 
 .taglineArea h1 {
-  font-size: 3.2rem;
+  font-size: var(--font-size);
   font-weight: 700;
   font-family: var(--heading-font);
   margin-bottom: 14px;
@@ -1830,7 +1816,7 @@ hr {
 
 .track-bar-wrapper {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   background: #fff;
   border-top: 4px solid #ff6600;
   display: flex;
@@ -1847,36 +1833,41 @@ hr {
   padding: 16px 20px;
   max-width: 1200px;
   width: 100%;
-  gap: 14px;
+  gap: 10px;
   position: absolute;
   top: 85%;
   z-index: 5;
 }
 
-.track-title {
+.track-title-one {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  gap: 4px;
+    padding-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: #ff6600;
+  margin-bottom: 3px;
   white-space: nowrap;
   font-family: var(--parimary-font);
 }
 
 .track-tabs {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   flex-wrap: wrap;
 }
 
 .track-tab {
-  padding: 10px 16px;
+  padding-top: 16px;
+  padding-left: 8px;
   background: #f3f3f3;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
+  cursor: pointer;;
+  font-weight: 400;
+  color: #777;
+  font-family: var(--parimary-font );
 }
 
 .track-tab.active-tab {
@@ -1892,7 +1883,8 @@ hr {
 
 .track-input {
   flex: 1;
-  padding: 12px 16px;
+  padding-top:16px;
+  padding-left: 12px;
   border: 1px solid #ccc;
   border-radius: 6px 0 0 6px;
   font-size: 1rem;
@@ -1912,7 +1904,7 @@ hr {
 
 @media (max-width: 1024px) {
   .taglineArea h1 {
-    font-size: 2.8rem;
+    font-size: var(--font-size);
   }
 
   .track-bar {
@@ -2198,10 +2190,10 @@ hr {
   font-family: 'Arial', sans-serif;
 }
 
-.section-title {
+.section-titleTwo {
   text-align: center;
   color: #2c3e50;
-  font-size: 3rem;
+  font-size:var(--font-size);
   margin-bottom: 1.8rem;
   font-weight: bold;
 }
@@ -2441,7 +2433,7 @@ hr {
 }
 
 .whyshop-title {
-  font-size: 2rem;
+  font-size: var(--font-size);
   font-weight: bold;
   text-align: center;
   margin-bottom: 3rem;
@@ -2523,7 +2515,7 @@ hr {
 }
 
 .call-to-action .cta-content h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -2610,7 +2602,7 @@ hr {
   }
 
   .call-to-action .cta-content h2 {
-    font-size: 2rem;
+    font-size:var(--font-size);
   }
 
   .call-to-action .cta-content p {
@@ -3466,7 +3458,7 @@ input[type="email"]:focus {
 /*--------------------------------------------------------------
 #AdminLogin Section Section
 --------------------------------------------------------------*/
-.admin-login-container {
+/* .admin-login-container {
   min-height: 100vh;
   background-color: #f5f7fa;
   display: flex;
@@ -3539,7 +3531,7 @@ input[type="email"]:focus {
   margin-top: 12px;
   text-align: center;
   font-weight: 500;
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -3548,126 +3540,102 @@ input[type="email"]:focus {
 
 .login-page {
   min-height: 100vh;
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
-
+  justify-content: center;
+  background: linear-gradient(to bottom, #fff, #ffe6f0);
+  padding: 20px;
+  font-family:var(--parimary-font);
 }
 
-
 .login-container {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 2rem 2.2rem;
-  text-align: center;
-  max-width: 420px;
   width: 100%;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  padding: 30px 25px;
+  text-align: center;
 }
 
 .login-container h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
   color: #333;
 }
 
 .login-container p {
-  text-align: center;
-  color: #666;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 30px;
 }
 
 .input-group {
   position: relative;
-  margin-bottom: 1.2rem;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 0.8rem 0.9rem 0.8rem 2.7rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
-  font-size: 0.95rem;
-  transition: 0.3s;
-  padding-left: 2.5rem;
-}
-
-.input-group input:focus {
-  border-color: #007bff;
-  background: #fff;
-  outline: none;
+  margin-bottom: 22px;
 }
 
 .input-icon {
   position: absolute;
   top: 50%;
-  left: 0.8rem;
+  left: 8px;
   transform: translateY(-50%);
-  color: #777;
+  color: #ff3366; 
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 14px 14px 36px;
+  border: none;
+  border-bottom: 1px solid #ccc;
   font-size: 1rem;
+  background: transparent;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #ff3366;
+}
+
+.status-msg {
+  font-size: 0.9rem;
+  color: #d33;
+  margin-bottom: 14px;
 }
 
 .login-btn {
-  background: #007bff;
+  background: #ff3366;
   color: #fff;
+  padding: 14px;
   border: none;
-  padding: 0.7rem;
-  width: 100%;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 0.5rem;
-  transition: 0.3s;
+  width: 100%;
+  margin-top: 8px;
 }
 
 .login-btn:hover {
-  background: #0056d2;
+  background: #e62e5c;
 }
 
 .link-text {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 25px;
   color: #555;
+  font-size: 0.95rem;
+}
+
+.link-text p {
+  margin: 6px 0;
 }
 
 .link-text a {
-  color: #007bff;
+  color: #ff3366;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .link-text a:hover {
   text-decoration: underline;
 }
 
-.status-msg {
-  color: #d9534f;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.2rem;
-}
-
-.social-icons i {
-  color: #007bff;
-  font-size: 1.3rem;
-  transition: transform 0.3s;
-}
-
-.social-icons i:hover {
-  transform: scale(1.2);
-}
 
 
 
@@ -3722,131 +3690,130 @@ input[type="email"]:focus {
 #sinup Section Section
 --------------------------------------------------------------*/
 
-
-.signup-page {
+.auth-page {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
+  justify-content: center;
+  background: linear-gradient(to bottom, #fff, #ffe6f0);
+  padding: 20px;
+  font-family: var(--parimary-font);
 }
 
-.signup-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  text-align: center;
+.auth-box {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
+  padding: 30px 25px;
+  border-radius: 0;
+  text-align: center;
 }
 
-.signup-card h2 {
-  margin-bottom: 25px;
-  font-weight: 700;
+.auth-box h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .google-btn {
-  background: white;
-  color: #333;
-  border: 1.5px solid #ddd;
-  border-radius: 8px;
-  padding: 12px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  background: #fff;
+  color: #444;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .google-btn img {
   width: 20px;
 }
 
-.google-btn:hover {
-  background: #f5f5f5;
-}
-
 .divider {
+  text-align: center;
   margin: 20px 0;
-  color: #777;
+  position: relative;
 }
 
-.email-toggle-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  width: 100%;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
+.divider span {
+  background: transparent;
+  padding: 0 12px;
+  color: #999;
 }
 
-.email-toggle-btn:hover {
-  background: #0056b3;
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 40%;
+  background: #ddd;
 }
 
-.email-form {
-  margin-top: 20px;
+.divider::before {
+  left: 0;
 }
 
-.form-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1.5px solid #ddd;
-  border-radius: 8px;
-  transition: 0.3s;
+.divider::after {
+  right: 0;
 }
 
-.form-input:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-
-.signup-btn {
-  background: #28a745;
-  color: white;
-  border: none;
+.auth-form input {
   padding: 14px;
-  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+}
+
+.submit-btn {
+  background: #ff3366;
+  color: #fff;
+  padding: 14px;
+  border: none;
   border-radius: 8px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  margin-top: 8px;
 }
 
-.signup-btn:hover {
-  background: #218838;
+.submit-btn:hover {
+  background: #e62e5c;
 }
 
-.signup-status {
-  background: #e9f7fd;
-  color: #333;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 16px;
+.status-text {
+  font-size: 0.9rem;
+  color: #d33;
 }
 
-.login-link {
-  margin-top: 20px;
+.link-text {
+  margin-top: 25px;
+  color: #555;
+  font-size: 0.95rem;
 }
 
-.login-link a {
-  color: #007bff;
+.link-text a {
+  color: #ff3366;
   text-decoration: none;
 }
 
-.login-link a:hover {
+.link-text a:hover {
   text-decoration: underline;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -3966,4 +3933,154 @@ input[type="email"]:focus {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
   border: none;
 }
+
+/*--------------------------------------------------------------
+# TrackParcel Section Section
+--------------------------------------------------------------*/
+.track-section {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 150px 60px 30px;
+  background: #f5f5f5;
+  flex-wrap: wrap;
+
+}
+
+/* Left Content */
+.track-info-box {
+  flex: 1;
+  max-width: 500px;
+}
+
+.track-info-box h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.track-info-box p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.track-info-box ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.track-info-box li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.support-info p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 4px 0;
+}
+
+/* Track Form Box */
+.track-card {
+  flex: 1;
+  max-width: 420px;
+  background: #fff;
+  padding: 30px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.07);
+}
+
+.track-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.track-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.track-tab {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.track-tab.active {
+  background: #ff6600;
+  color: #fff;
+  border-color: #ff6600;
+}
+
+.track-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.track-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.track-button {
+  padding: 12px 18px;
+  background: #ff6600;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.track-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.track-progress.show {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.track-step {
+  padding: 14px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  color: #333;
+}
+
+.track-step.completed {
+  background: #e6ffe9;
+  color: #087f23;
+}
+
+.track-step.inprogress {
+  background: #fff8d8;
+  color: #b38100;
+}
+
+.track-step.failed {
+  background: #fff8d8;
+  color: #b38100;
+}
+
 

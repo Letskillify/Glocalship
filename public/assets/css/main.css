@@ -1203,7 +1203,7 @@ a{
 
 .hero-about-us-section {
   background: url('/images/about-us-ship.jpg') center center / cover no-repeat;
-  min-height: 400px;
+  min-height: 400px;}
 
 .hero-about-head {
   font-size: var(--font-size);

@@ -78,10 +78,15 @@ const Testimo = () => {
 
   return (
        <div className="testimonial-container">
+<<<<<<< HEAD:src/components/homePage/Testimonials.jsx
       <div className="top-testimo">
         <h1 className="section-title">Testimonials</h1>
       <div className="section-svg"></div>
       </div>
+=======
+      <h1 className="section-titleTwo">Testimonials</h1>
+      <div className="section-underlineTwo"></div>
+>>>>>>> 1c5dde876d65eda20de09e0974eade8c601e94b9:src/components/homePage/Tastimonilas.jsx
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
           {Tastimonilas.map((testimonial) => (

@@ -2,13 +2,13 @@ import React from 'react';
 const WhyShopWithUs = () => {
     return (
         <div
-            className="whyshop-bg container section-title"
+            className="whyshop-bg  section-title"
             style={{
                 position: 'relative',
                 backgroundImage: "url('/assets/img/illustration/whyy.jpg')",
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
+                backgroundPosition: 'center',   
                 overflow: 'hidden'
             }}
         >

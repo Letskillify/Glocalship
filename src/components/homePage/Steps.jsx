@@ -29,9 +29,9 @@ const StepsComponent = () => {
     <div className="stepsContainer">
       {steps.map((step) => (
         <div key={step.id} className="ydc-step">
-          <div className="stepNumber">{step.id}</div>
-          <h3 className="stepTitle">{step.title}</h3>
-          <p className="stepDesc">{step.description}</p>
+          <div className="stepNumber ">{step.id}</div>
+          <h3 className="stepTitle ">{step.title}</h3>
+          <p className="stepDesc ">{step.description}</p>
         </div>
       ))}
     </div>

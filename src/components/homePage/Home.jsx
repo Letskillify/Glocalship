@@ -15,12 +15,14 @@ import Steps from './Steps'
 import Login from '../../pages/Login'
 import Signup from '../../pages/Signup'
 
+
 function Home() {
   return (
     <div>
       {/* <HeroSection/> */}
-      {/* <Login/>   */}
-      {/* <Signup/> */}
+      {/* <Login/>  
+      <Signup/> */}
+     
       <Banner />
       <About />
       <Stats />

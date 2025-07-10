@@ -1,68 +1,74 @@
+import { Link } from "react-router-dom";
+import { Package, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+
 
 function Footer() {
   return (
-    <footer id="footer" className="footer"> 
+    <footer className="custom-footer">
       <div className="container">
-        <div className="row ">
+        <div className="footer-container">
 
-          <div className="col-lg-4 col-md-6">
-            <h5 className=" mb-3 footer-logo">Glocalship</h5>
-            <p>
-              Glocalship is your trusted global parcel delivery partner. We provide fast, reliable, and secure shipping solutions worldwide.
-            </p>
-            <div className="social-links d-flex gap-3">
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+          {/* Top Section */}
+          <div className="footer-grid">
+
+            {/* Logo + About */}
+            <div className="footer-logo-section">
+              <div className="footer-logo">
+                <div className="logo-icon">
+                  <Package className="icon-white" />
+                </div>
+                <span className="footer-brand">ShipForward</span>
+              </div>
+              <p className="footer-description">
+                Your trusted partner for international package forwarding from India. Shop globally, ship locally.
+              </p>
+              <div className="footer-social-icons">
+                <Facebook className="social-icon fb" />
+                <Twitter className="social-icon tw" />
+                <Instagram className="social-icon ig" />
+                <Linkedin className="social-icon li" />
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="links-section">
+              <h3 className="footer-heading">Quick Links</h3>
+              <div className="footer-links">
+                <Link to="/" className="footer-link">Home</Link>
+                <Link to="/dashboard" className="footer-link">Dashboard</Link>
+                <Link to="/tracking" className="footer-link">Track Package</Link>
+                <Link to="/pricing" className="footer-link">Pricing</Link>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="footer-heading">Services</h3>
+              <div className="footer-links">
+                <span className="footer-link">Package Forwarding</span>
+                <span className="footer-link">Package Consolidation</span>
+                <span className="footer-link">Express Shipping</span>
+                <span className="footer-link">Storage Services</span>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="footer-heading">Contact Us</h3>
+              <div className="footer-contact">
+                <div><Mail className="contact-icon" /> support@shipforward.com</div>
+                <div><Phone className="contact-icon" /> +91 98765 43210</div>
+                <div><MapPin className="contact-icon" /> Mumbai, India</div>
+              </div>
             </div>
           </div>
 
-          <div className="col-lg-2 col-md-3">
-            <h6 className="footer-link-head">Quick Links</h6>
-            <ul className="ul-menu list-unstyled">
-              <li><a href="#" className="list">Home</a></li>
-              <li><a href="#" className="list">Track Parcel</a></li>
-              <li><a href="#" className="list">Pricing</a></li>
-              <li><a href="#" className="list">Contact</a></li>
-            </ul>
+          {/* Bottom Strip */}
+          <div className="footer-bottom">
+            <p>
+              © 2024 ShipForward. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
           </div>
-
-          <div className="col-lg-2 col-md-3">
-            <h6 className="footer-link-head">Services</h6>
-            <ul className="ul-menu list-unstyled">
-              <li><a href="#" className="list">Local Delivery</a></li>
-              <li><a href="#" className="list">International Shipping</a></li>
-              <li><a href="#" className="list">Warehouse Solutions</a></li>
-              <li><a href="#" className="list">E-commerce Fulfillment</a></li>
-            </ul>
-          </div>
-
-          <div className="col-lg-2 col-md-3">
-            <h6 className="footer-link-head">Support</h6>
-            <ul className="ul-menu list-unstyled">
-              <li><a href="#" className="list">FAQs</a></li>
-              <li><a href="#" className="list">Help Center</a></li>
-              <li><a href="#" className="list">Privacy Policy</a></li>
-              <li><a href="#" className="list">Terms & Conditions</a></li>
-            </ul>
-          </div>
-          
-          <div className="col-lg-2 col-md-3">
-            <h6 className="footer-link-head">Address</h6>
-            <ul className="ul-menu list-unstyled">
-              <li><i className="fas fa-map-marker-alt me-2"></i>A-108, Global Business Park</li>
-              <li>New Delhi, India - 110001</li>
-              <li className="mt-2"><i className="fas fa-phone me-2"></i>+91 98765 43210</li>
-              <li><i className="fas fa-envelope me-2"></i>support@glocalship.com</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr className="text-secondary mt-4" />
-
-        <div className="text-center pb-3">
-          <p className="mb-0">&copy; 2025 <strong>Glocalship</strong>. All rights reserved.</p>
         </div>
       </div>
     </footer>

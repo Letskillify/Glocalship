@@ -19,7 +19,6 @@ export default function FaqSection() {
     <section className="py-5">
       <div className="container section-title text-center mb-4" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div>
 
       <div className="container">
@@ -28,7 +27,7 @@ export default function FaqSection() {
           <div className="col-md-6">
             {faqData.map((item, index) => (
               <div className="faq-item" key={index}>
-                <p className="faq-question" onClick={() => toggleAnswer(index)}>
+                <p className="faq-question m-0" onClick={() => toggleAnswer(index)}>
                   <span>{index + 1}. {item.question}</span>
                   <span className={`faq-arrow ${openIndex === index ? "rotate" : ""}`}>▼</span>
                 </p>

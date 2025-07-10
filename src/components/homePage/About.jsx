@@ -100,60 +100,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* service sec */}
-      <section className="vision-mission-section py-5">
-        <div className="container text-center">
-          <h1 className="section-title head-about">Our Vision & Mission</h1>
-          <p className="section-subtitle mb-5">
-            We're focused on reshaping delivery experiences through smart
-            logistics, ethical values, and strong partnerships.
-          </p>
-
-          {/* First Row */}
-          <div className="row justify-content-center">
-            {values.slice(0, 2).map((item, index) => (
-              <div className="col-md-6 mb-4" key={index} data-aos="fade-up">
-                <div className="vision-mission-card">
-                  <div className="icon-circle mx-auto mb-3">{item.icon}</div>
-                  <h5 className="fw-bold vision-card-title">{item.title}</h5>
-                  <p className="vision-desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Second Row */}
-          <div className="row justify-content-center">
-            {values.slice(2, 4).map((item, index) => (
-              <div className="col-md-6 mb-4" key={index + 2}>
-                <div className="vision-mission-card">
-                  <div className="icon-circle mx-auto mb-3">{item.icon}</div>
-                  <h5 className="fw-bold vision-card-title">{item.title}</h5>
-                  <p className="vision-desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section text-center py-5" data-aos="fade-up">
-        <div className="container">
-          <div className="cta-content-wrapper">
-            <h1 className="cta-heading">Let’s Deliver Smarter Together</h1>
-            <p className="cta-subtext">
-              Join us in transforming the future of parcel delivery. We’re ready when you are.
-            </p>
-            <a href="/contact" className="button">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </section>
-
-
-
       {/* our team */}
       <section className="team-section" aria-label="Meet Our Team">
         <h1 className="head-about team-head " data-aos="fade-down">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaUser, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaUser, FaPhoneAlt, FaEnvelope,} from 'react-icons/fa';
 function Contact() {
   return (
     <div>
@@ -7,14 +7,13 @@ function Contact() {
 
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="contact-main-wrapper">
             <div className="contact-card responsive-card">
               <div className="contact-left">
                 <h2>Get in touch</h2>
-                <p>a queue or waiting list that users may encounter when trying to access a popular food or grocery delivery service </p>
+                <p>A queue or waiting list that users may encounter when trying to access a popular food or grocery delivery service </p>
                 <img src='/assets/img/illustration/illustrationcontact.avif' alt="illustration" className="illustration" />
               </div>
               <div className="contact-right">
@@ -27,23 +26,21 @@ function Contact() {
                 />
                 <form>
                   <div className="input-group">
-                    <FaUser />
+                    <FaUser className='usericon' />
                     <input type="text" placeholder="Your name" autoComplete='' required />
-                    <FaPhone />
+                  </div>
+                  <div className="input-group">
+                    <FaPhoneAlt className='usericon' />
                     <input type="text" placeholder="Your phone no." required />
                   </div>
                   <div className="input-group">
-                    <FaEnvelope />
+                    <FaEnvelope  className='usericon'/>
                     <input type="email" placeholder="Your email" required />
                   </div>
                   <textarea placeholder="Message..."></textarea>
                   <button type="submit">Submit</button>
                 </form>
-                <div className="social-icons">
-                  <FaFacebook className="icon" />
-                  <FaInstagram className="icon" />
-                  <FaLinkedin className="icon" />
-                </div>
+    
               </div>
             </div>
             {/* googlemap  */}

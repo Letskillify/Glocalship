@@ -1464,7 +1464,6 @@ a {
 .img-container {
   flex: 1 1 400px;
   max-width: 500px;
-  position: relative;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -1823,87 +1822,65 @@ a {
 --------------------------------------------------------------*/
 
 .slider-section {
-  width: 100%;
   padding: 60px 20px;
-  background-color: #ffffff;
+  background: linear-gradient(135deg,#757f9a,
+#d7dde8);
+color: white;
   text-align: center;
 }
 
 .slider-heading {
-  font-size: 2.5rem;
-  font-size:var(--font-size);
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 20px;
+  color: #1e293b;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
-.slider-head-svg {
+
+.slider-wave {
   width: 100%;
   max-width: 300px;
   height: 40px;
-  margin: -25px auto 0 auto;
+  margin: -25px auto 30px auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath fill='%23404' d='M771 17c-12-2-24 2-32 11-5 5-7 11-8 17H578c-20-8-34-15-56-15l-16 15h-12l-17-15c-21 0-35 7-55 15H269c-1-6-3-12-8-17-8-9-20-13-32-11l-99 33 99 33c12 2 24-2 32-11 5-5 7-11 8-17h153c20 8 34 15 55 15l17-15h12l16 15c22 0 36-7 56-15h153c1 6 3 12 8 17 8 9 20 13 32 11l99-33-99-33Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.slider-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .slide-card {
-  padding: 10px;
+  padding: 15px;
 }
 
-.image-wrapper {
+.card-content {
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  background-color: #fff;
 }
 
-.image-wrapper:hover img {
-  transform: scale(1.05);
+.card-content:hover {
+  transform: scale(1.03);
 }
 
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card-content img {
   width: 100%;
-  height: 100%;
-  /* Cover full image */
-  background: rgba(0, 0, 0, 0.6);
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
   color: #fff;
-  display: flex;
-  /* Flex for centering */
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.image-wrapper:hover .overlay {
-  opacity: 1;
-}
-
-.overlay-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px 20px;
+  text-align: left;
 }
 
 

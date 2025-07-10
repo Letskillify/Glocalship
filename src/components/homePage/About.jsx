@@ -2,9 +2,9 @@ function About() {
   return(
     <>
       <section className="our-info" data-aos="fade-up">
-        <div className="img-container position-relative" >
+        <div className="img-container" >
           <img
-            src="/images/about-home-1.png"
+            src="/assets/img/about/about-home-1.png"
             alt="Vibrant city harbor showing a large ship docked with colorful buildings in the background during daylight"
             className="img-our-info"
           />

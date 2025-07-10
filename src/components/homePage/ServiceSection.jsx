@@ -4,10 +4,6 @@ import Slider from "react-slick";
 
 const data = [
   {
-    image: "/assets/img/services/delivery-1.png",
-    title: "Global Delivery",
-  },
-  {
     image: "/assets/img/services/delivery-2.jpg",
     title: "Real-Time Tracking",
   },
@@ -17,7 +13,7 @@ const data = [
   },
   {
     image: "/assets/img/services/delivery-4.jpg",
-    title: "Fast Shipping",
+    title: "Shipping",
   },
   {
     image: "/assets/img/services/delivery-5.jpg",
@@ -25,40 +21,37 @@ const data = [
   },
 ];
 
-
 function ServiceSection() {
-
-    const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 9000,
+  cssEase: "linear",  
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,        
+  pauseOnHover: false,
+  arrows: false, 
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
       },
-    ],
-  };
-
-
+    },
+  ],
+};
   return (
-     <div className="slider-section">
+    <div className="slider-section">
       <h2 className="slider-heading">Our Services</h2>
-      <div className="slider-head-svg"></div>
+      <div className="slider-wave"></div>
       <div className="slider-wrapper">
         <Slider {...settings}>
           {data.map((item, index) => (
@@ -74,7 +67,7 @@ function ServiceSection() {
         </Slider>
       </div>
     </div>
-  )
+  );
 }
 
-export default ServiceSection
+export default ServiceSection;

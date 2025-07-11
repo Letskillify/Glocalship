@@ -22,7 +22,7 @@ const data = [
 ];
 
 function ServiceSection() {
-const settings = {
+ const settings = {
   dots: false,
   infinite: true,
   speed: 9000,
@@ -48,6 +48,8 @@ const settings = {
     },
   ],
 };
+
+
   return (
     <div className="slider-section">
       <h2 className="slider-heading">Our Services</h2>
@@ -56,10 +58,10 @@ const settings = {
         <Slider {...settings}>
           {data.map((item, index) => (
             <div key={index} className="slide-card">
-              <div className="image-wrapper">
+              <div className="card-content">
                 <img src={item.image} alt={item.title} />
-                <div className="overlay">
-                  <p className="overlay-title">{item.title}</p>
+                <div className="card-overlay">
+                  <h3>{item.title}</h3>
                 </div>
               </div>
             </div>

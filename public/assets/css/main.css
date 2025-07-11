@@ -1778,8 +1778,7 @@ a {
 
 .slider-section {
   padding: 60px 20px;
-  background: linear-gradient(135deg,#757f9a,
-#d7dde8);
+    background: linear-gradient(to right, #fffaf7, #ffe6d6);
 color: white;
   text-align: center;
 }
@@ -1812,7 +1811,6 @@ color: white;
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   background-color: #fff;
 }
@@ -1837,6 +1835,7 @@ color: white;
   color: #fff;
   text-align: left;
 }
+
 
 
 /*--------------------------------------------------------------

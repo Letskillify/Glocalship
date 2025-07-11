@@ -82,8 +82,6 @@ const Testimo = () => {
         <h1 className="section-title">Testimonials</h1>
       <div className="section-svg"></div>
       </div>
-      <h1 className="section-titleTwo">Testimonials</h1>
-      <div className="section-underlineTwo"></div>
       <div className="testimonial-slider-wrapper">
         <Slider {...settings}>
           {Tastimonilas.map((testimonial) => (
